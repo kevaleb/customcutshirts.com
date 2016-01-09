@@ -633,13 +633,29 @@ footer > div > a > span {
 footer > div > section {
 	display: inline-block;
 	margin: 0 -.25em 0 0;
-	padding: 36px 0;
+	padding: 0px 0;
 	width: 33.33%;
 	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #999;
 	vertical-align: top;
 	text-align: center;
 }
+
+footer > div > section.social {
+	padding: 0;
+	margin:  0 0 12px 0;
+}
+footer > div > section.social > a {
+	padding: 0 12px;
+}
+footer > div > section.social > a > span {
+	font-size: 30px;
+	color: #fff;
+}
+footer > div > section.social > a:hover > span {
+	color: #d64336;
+}
+
 footer > div > p {
 	font: inherit;
 	color: inherit;
