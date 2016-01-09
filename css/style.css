@@ -625,6 +625,7 @@ footer > div > a > img {
 }
 footer > div > a > span {
 	display: block;
+	margin: 0 0 24px 0;
 	color: #fff;
 	font: 100 18px/24px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 2px;
@@ -642,9 +643,18 @@ footer > div > section {
 footer > div > p {
 	font: inherit;
 	color: inherit;
-	font:200 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 1px;
+	font:200 15px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0px;
 	color: #999;
+}
+footer > div > p > span {
+	display: inline-block;
+	margin: 0 0 6px 0;
+	padding: 12px;
+	font-size: 16px;
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #fff;
 }
 /* @end */
 
