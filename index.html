@@ -132,9 +132,12 @@ description: We make your baggy shirts fit better
 	  var bicep = $('input#bicep').val();
 	  $('.snipcart-add-item').data('item-custom4-value',bicep);
 	});
+	
+	
+	
+	// Snipcart Custom Thank You Page
+	Snipcart.execute('bind', 'order.completed', function (order) {
+		var url = '/thankyou?order=' + order.token + '&orderid=' + order.invoiceNumber;
+		window.location.href = url;
+	});
 </script>
-
-
-
-
-
