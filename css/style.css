@@ -726,16 +726,16 @@ footer > div > a > span {
 	font: 100 18px/24px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 2px;
 }
-/*footer > div > section {
+footer > div > section {
 	display: inline-block;
 	margin: 0 -.25em 0 0;
 	padding: 0px 0;
-	width: 33.33%;
+	/*width: 33.33%;*/
 	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #999;
 	vertical-align: top;
 	text-align: center;
-}*/
+}
 
 footer > div > section.social {
 	padding: 0;
