@@ -101,50 +101,53 @@ a:hover {
 
 /* @group HEADER */
 body > header {
-	position: absolute;
-	z-index: 1000000000;
+	position: fixed;
+	z-index: 100000;
 	width: 100%;
-	height: 72px;
+	height: 60px;
 	padding: 12px;
 	text-align: center;
+	background: rgba(0,0,0,.5);
 }
 body > header > div {
 	position: relative;
-	max-width: 1080px;
+	max-width: 800px;
 	margin: 0 auto;
 }
 body > header > div > a {
 	position: absolute;
 	left: 0px;
 	top: 0px;
+	font: 24px/36px Georgia, "Times New Roman", Times, serif;
+	text-decoration: none;
+	color: #fff;
 }
-body > header > div > .menu-button {
-	display: none;
-	width: 48px;
-	height: 48px;
-	padding: 0 0 0 12px;
-	border-left: 1px solid #ccc;
-	font: 900 24px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #ccc;
-	/*background: #f16;*/
+body > header > div > a:hover {
+	color: #fff;
 }
-body > header > div > .menu-button:hover {
-	color: #b23636;
-	cursor: pointer;
+body > header > div > a > img {
+	height: 36px;
+	vertical-align: middle;
 }
+body > header > div > a > span {
+	vertical-align: middle;
+}
+
+
+
 body > header > div > nav {
 	text-align: right;
-	padding: 12px 0;
+	padding: 0 12px 0 0;
 }
 body > header > div > nav > p  {
 	display: none;
 }
 body > header > div > nav > a {
 	position: relative;
-	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 200 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
-	color: #666;
-	margin: 0 0 0 12px;
+	color: #fff;
+	margin: 0 0 0 18px;
 }
 body > header > div > nav > a:hover {
 	color: #000;
@@ -176,7 +179,7 @@ body > header > div > nav > a:hover {
 article {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 60px 0px 60px 0;
+	padding: 36px;
 }
 
 
@@ -256,13 +259,18 @@ article > ul > li{
 	height: 100%;
 	/*max-height: 720px;*/
 	min-height: 320px;
-	background: radial-gradient(ellipse farthest-corner, #333 12%, black 100%) #f2f2f2;
+	background: radial-gradient(ellipse farthest-corner, #333 12%, black 100%) #000;
 	/*background-size: cover;*/
 	background-attachment: fixed;
 	/*background-position: right top;*/
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
+}
+.banner.half {
+	height: 50%;
+	background: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
+	background-attachment: fixed;
 }
 .banner > img {
 	position: absolute;
@@ -315,10 +323,10 @@ article > ul > li{
 }
 .banner > hgroup > img {
 	max-width: 120px;
-	margin: 0 auto;
+	margin: 0 auto 24px auto;
 }
 .banner > hgroup > h1 {
-	margin: 24px 0 0 0;
+	margin: 0px 0 0 0;
 	font:100 30px/36px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 3px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
@@ -334,9 +342,9 @@ article > ul > li{
 }
 .banner > hgroup > h2 {
 	margin: 0 0 48px 0;
-	font: 100 20px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 200 20px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 2px;
-	color: rgba(255,255,255,.25);
+	color: rgba(255,255,255,1);
 }
 /* @end */
 /* @end */
@@ -517,8 +525,7 @@ article > ul > li{
 	display: inline-block;
 	width: 40%;
 	padding: 0;
-	vertical-align: top;
-	/*background: #f16;*/	
+	vertical-align: top;	
 }
 .thank-you > ul > li > section > img {
 	width: 100%;
@@ -703,6 +710,7 @@ footer > div {
 }
 footer > div > a {
 	display: block;
+	width: 100%;
 	max-width: 320px;
 	margin: 0 auto;
 	text-decoration: none;
@@ -713,12 +721,12 @@ footer > div > a > img {
 }
 footer > div > a > span {
 	display: block;
-	margin: 0 0 24px 0;
+	margin: 0 0 12px 0;
 	color: #fff;
 	font: 100 18px/24px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 2px;
 }
-footer > div > section {
+/*footer > div > section {
 	display: inline-block;
 	margin: 0 -.25em 0 0;
 	padding: 0px 0;
@@ -727,11 +735,12 @@ footer > div > section {
 	color: #999;
 	vertical-align: top;
 	text-align: center;
-}
+}*/
 
 footer > div > section.social {
 	padding: 0;
 	margin:  0 0 12px 0;
+	
 }
 footer > div > section.social > a {
 	padding: 0 12px;
@@ -760,19 +769,51 @@ footer > div > p > span {
 	letter-spacing: 1px;
 	color: #fff;
 }
+
+
+footer > div > nav {
+	margin: 0 0 36px;
+}
+footer > div > nav > a {
+	padding: 0 12px;
+	font: 100  "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+}
+footer > div > nav > a:hover {
+	color: #d64336;
+}
 /* @end */
 
 
+
+.snipcart-checkout-container {
+
+	z-index: 10000000000000000000!important;
+}
 
 
 
 
 
 @media all and (max-width: 540px) {
+body > header {
+	
+}
+body > header > div > a {
+	/*position: relative;*/
+	display: block;
+}
+body > header > div > a > span {
+	display: none;
+}
+body > header > div > nav {
+	display: block;
+}
+
+
 
 .banner {
 	height: auto;
-	/*padding: 24px;*/
 }
 .banner::after {
 	display: none;
@@ -781,27 +822,25 @@ footer > div > p > span {
 	height: auto;
 	max-width: 50%;
 	max-height: 100%;
+	opacity: .5;
 }
 .banner > hgroup {
 	padding: 96px 24px;
 	text-shadow: 0 1px 5px rgba(0,0,0,.5);
-	background: rgba(0,0,0,.5);
 }
 .banner > hgroup > img {
-	max-width: 200px;
+	max-width: 120px;
 	margin: 0 0 24px 0;
 }
 .banner > hgroup > h1 {
 	margin: 0 0 0px 0;
-	/*background: rgba(0,0,0,.5);*/
+	font-size: 24px;
 }
 .banner > hgroup > h2 {
 	display: inline-block;
 	margin: 0;
-	/*padding: 6px 12px;*/
 	color: #fff;
-	font-weight: 200;
-	/*background: rgba(0,0,0,.5);*/
+	font-size: 16px;
 }
 .banner > hgroup > .button {
 	display: none;
