@@ -175,80 +175,6 @@ body > header > div > nav > a:hover {
 	padding: 48px 0;
 }
 
-/* @group Article */
-article {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 36px;
-}
-
-
-article > hgroup {
-	margin: 72px 0 48px 0;
-	text-align: center;
-}
-article > h1 {
-	margin: 36px 0;
-}
-article > h2 {
-	margin: 36px 0;
-}
-article > p+h3  {
-	margin: 72px 0 0 0;
-}
-
-
-article > blockquote > p {
-	margin: 72px;
-	text-align: center;
-	font-size: 36px;
-	font-weight: 100;
-	letter-spacing: 1px;
-	color: #b23636;
-}
-article > blockquote > p:before,
-article > blockquote > p:after {
-	content: '"';
-}
-
-article p {
-	margin: 36px 0;
-	font-size: 20px;
-	overflow: hidden;
-}
-article > h3+p {
-	margin: 0 0 36px 0;
-}
-article > p:first-of-type:first-letter { 
-	float: left; 
-	color: #b23636; 
-	font-size: 120px; 
-	line-height: 96px; 
-	vertical-align: top;
-	padding-top: 12px; 
-	padding-right: 24px; 
-	padding-left: 3px; 
-	font-family: Georgia; 
-}
-article > hr {
-	height: 48px;
-	border: none;
-	border-top: 1px dotted #ccc;
-}
-
-
-article > ul {
-	padding: 0 0 0 24px;
-}
-article > ul > li{
-	margin: 36px 0;
-	/*padding: 50px;*/
-	font-size: 20px;
-}
-/* @end */
-
-
-
 
 /* @end */
 
@@ -260,17 +186,19 @@ article > ul > li{
 	/*max-height: 720px;*/
 	min-height: 320px;
 	background: radial-gradient(ellipse farthest-corner, #333 12%, black 100%) #000;
-	/*background-size: cover;*/
+	background-size: cover;
 	background-attachment: fixed;
-	/*background-position: right top;*/
+	background-position: center;
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
 }
-.banner.half {
+.content .banner.half {
 	height: 50%;
-	background: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
-	background-attachment: fixed;
+	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
+	background-attachment:scroll;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .banner > img {
 	position: absolute;
@@ -698,6 +626,8 @@ article > ul > li{
 	max-width: 30%;
 	margin: 0 -.25em 0 0;
 	background: #fff;
+	border: 1px solid #ccc;
+	border-top: none;
 	vertical-align: top;
 }
 .blogposts > li+li {
@@ -717,8 +647,8 @@ article > ul > li{
 }
 .blogposts > li > a > h2 {
 	margin: 0 0 12px;
-	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	
+	font: 900 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #d64336;
 }
 .blogposts > li > a > h3 {
 	font: 400 11px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -732,6 +662,85 @@ article > ul > li{
 	font: 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #666;
 	text-overflow: ellipsis;
+}
+/* @end */
+
+
+
+
+/* @group Article */
+article {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 36px;
+}
+
+
+article > hgroup {
+	margin: 72px 0 48px 0;
+	text-align: center;
+}
+article > h1 {
+	margin: 36px 0;
+}
+article > h2 {
+	margin: 36px 0;
+}
+article > p+h3  {
+	margin: 72px 0 0 0;
+}
+
+
+article > blockquote > p {
+	margin: 72px 0;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	color: #b23636;
+}
+article > blockquote > p:before,
+article > blockquote > p:after {
+	content: '"';
+}
+
+article p {
+	margin: 0 0 36px 0;
+	font-size: 20px;
+	overflow: hidden;
+}
+article p > img {
+	width: 100%;
+	/*margin: -36px 0 0 0;*/
+}
+article > h3+p {
+	margin: 0 0 36px 0;
+}
+article > p:first-of-type:first-letter { 
+	float: left; 
+	color: #b23636; 
+	font-size: 120px; 
+	line-height: 96px; 
+	vertical-align: top;
+	padding-top: 12px; 
+	padding-right: 24px; 
+	padding-left: 3px; 
+	font-family: Georgia; 
+}
+article > hr {
+	height: 48px;
+	border: none;
+	border-top: 1px dotted #ccc;
+}
+
+
+article > ul {
+	padding: 0 0 0 24px;
+}
+article > ul > li{
+	margin: 36px 0;
+	/*padding: 50px;*/
+	font-size: 20px;
 }
 /* @end */
 
