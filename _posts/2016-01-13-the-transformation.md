@@ -3,7 +3,7 @@ layout: article
 title: How To Make Baggy Shirts Fit Perfectly
 category: Marketing
 author: Kevin LeBaron
-permalink: blog/the-1-thing-your-customers-think-about
+permalink: blog/how-to-make-baggy-shirts-fit-perfectly
 bannerimage: /images/transformations/001/banner.png
 authorimage: kevin.jpg
 ---
