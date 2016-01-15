@@ -642,8 +642,9 @@ body > header > div > nav > a:hover {
 	height: 150px;
 	margin: -24px -24px 24px -24px;
 	background-color: #000;
-	background-size: cover;
-	background-position: top right;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .blogposts > li > a > h2 {
 	margin: 0 0 12px;
