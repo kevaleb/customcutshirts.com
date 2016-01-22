@@ -381,7 +381,7 @@ body > header > div > nav > a:hover {
 	top: 100%;
 	left: -6px;
 	width: 100%;
-	margin: -24px 0 0 0;
+	margin: 0px 0 0 0;
 	padding: 0 24px;
 	white-space: normal;
 	opacity: 0;
@@ -401,13 +401,13 @@ body > header > div > nav > a:hover {
 
 .measure > form {
 	display: inline-block;
-	/*padding: 72px 24px 48px;*/
+	width: 96px;
 	vertical-align: middle;
 }
 .measure > form > label {
 	position: relative;
 	display: block;
-	margin: 0 0 12px 0;
+	margin: 0 0 18px 0;
 	text-align: left;
 }
 /*.measure > form > label:after {
@@ -415,19 +415,29 @@ body > header > div > nav > a:hover {
 	font: 900 36px/48px "Lucida Grande", Lucida, Verdana, sans-serif;
 }*/
 .measure > form > label > span {
-	display: inline-block;
+	display: block;
 	width: 60px;
-	font: 100 1em/1.5em Georgia, "Times New Roman", Times, serif;
+	font: 100 12px/12px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 2px;
 }
 .measure > form > label > input {
-	width: 96px;
-	padding: 0 24px;
+	width: 100%;
+	padding: 0 12px;
 	border: 2px solid #000;
 	border-radius: 3px;
 	outline: none;
 	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: center;
+	text-align: left;
+}
+.measure > form > label:after {
+	content: 'In';
+	position: absolute;
+	bottom: 14px;
+	right: 6px;
+	font: 400 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 2px;
+	color: #ccc;
+	text-transform: uppercase;
 }
 .measure > form > label > input:focus {
 	border-color: #d64336;
@@ -440,7 +450,7 @@ body > header > div > nav > a:hover {
 
 
 .measure > .add-to-cart {
-	margin: 24px 0 0 0;
+	margin: 48px 0 0 0;
 }
 .measure > .add-to-cart > label {
 	position: relative;
@@ -1034,11 +1044,11 @@ body > header > div > nav {
 .measure > .image > h3 {
 	
 }
-.measure > form {
+/*.measure > form {
 	width: 50%;
 	padding: 36px 0;
 	text-align: left;
-}
+}*/
 .measure > form > label {
 	
 }
