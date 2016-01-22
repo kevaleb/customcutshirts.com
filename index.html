@@ -48,9 +48,19 @@ description: We make your baggy shirts fit better
 
 <section class="measure">
 	<h3>What's your size?</h3>
+	<h4>Give us your true sizes... we'll add the proper amount of breathing room.</h4>
 	<div class="image">
-		<img src="/images/illustrations/measurements.png" alt="" />
-		<h3 id="price">20</h3>
+		<div class="measurements">
+			<img src="/images/illustrations/measurements/bicep.png" alt="bicep size"  id="bicep-size" class="size"/>
+			<p>Give us your fully flexed measurement on this one.</p>
+			<img src="/images/illustrations/measurements/hips.png" alt="hips size" id="hips-size" class="size"/>
+			<p>Measure a little bit below your belt, think the widest part of your butt.</p>
+			<img src="/images/illustrations/measurements/waist.png" alt="waist size" id="waist-size" class="size"/>
+			<p>This will typically be your smallest measurement, just beneath your rib cage. Now is not the time to suck it in.</p>
+			<img src="/images/illustrations/measurements/chest.png" alt="chest size" id="chest-size" class="size"/>
+			<p>Measure just below your arm pits, keep the tape straight all the way around your back and stop flexing.</p>
+			<img src="/images/illustrations/measurements/shirt.png" alt="shirt size" />
+		</div>
 	</div>
 	<form>
 		<label>
@@ -69,13 +79,16 @@ description: We make your baggy shirts fit better
 			<span>Bicep</span>
 			<input type="text" name="bicep" id="bicep" value="" />
 		</label>
+	</form>
+	<br />
+	<div class="add-to-cart">
+		<h3 id="price">20</h3>
 		<label>
 			<span>Qty.</span>
-			<input type="text" name="qty" id="qty" value="" />
+			<input type="number" name="qty" id="qty" value="" />
 		</label>
-
 		<a href="#"
-		    class="snipcart-add-item button dark"
+		    class="snipcart-add-item button red"
 		    data-item-id="1"
 		    data-item-name="Custom Tailored Shirt"
 		    data-item-price="20.00"
@@ -91,7 +104,7 @@ description: We make your baggy shirts fit better
 		    data-item-custom4-name="Biceps"
 		    data-item-custom4-required="true"
 		>Add To Cart</a>
-	</form>
+	</div>
 </section>
 <script type="text/javascript" src="https://cdn.snipcart.com/scripts/snipcart.js" id="snipcart"
   data-api-key="MWZmY2VlY2YtZTRlMS00OWI2LWJjYjItNjcwNTNiNGNhY2Q0NjM1ODc5MTI5MTU0MjM0MzE1"></script>
@@ -115,10 +128,21 @@ description: We make your baggy shirts fit better
 	  $('.snipcart-add-item').data('item-custom1-value',chest);
 	});
 	
+	$( "input#chest" ).focus(function() {
+		$('.measurements > .visible').removeClass('visible');
+		$('#chest-size').addClass('visible');
+		$('.measure > .image > p').html('');
+	});
+	
 	// waist
 	$( "input#waist").change(function() {
 	  var waist = $('input#waist').val();
 	  $('.snipcart-add-item').data('item-custom2-value',waist);
+	});
+	
+	$( "input#waist" ).focus(function() {
+		$('.measurements > .visible').removeClass('visible');
+		$('#waist-size').addClass('visible');
 	});
 	
 	// hips
@@ -127,10 +151,20 @@ description: We make your baggy shirts fit better
 	  $('.snipcart-add-item').data('item-custom3-value',hips);
 	});
 	
+	$( "input#hips" ).focus(function() {
+		$('.measurements > .visible').removeClass('visible');
+		$('#hips-size').addClass('visible');
+	});
+	
 	// bicep
 	$( "input#bicep").change(function() {
 	  var bicep = $('input#bicep').val();
 	  $('.snipcart-add-item').data('item-custom4-value',bicep);
+	});
+	
+	$( "input#bicep" ).focus(function() {
+		$('.measurements > .visible').removeClass('visible');
+		$('#bicep-size').addClass('visible');
 	});
 	
 	
