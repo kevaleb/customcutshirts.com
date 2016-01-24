@@ -118,7 +118,7 @@ description: We make your baggy shirts fit better
 	$( "input#qty").change(function() {
 	  var qty = $('input#qty').val();
 	  
-	  $('#price').html(Math.max((20-qty), 15));
+	  $('#price').html(Math.max((20-qty+1), 15));
 	  $('.snipcart-add-item').data('item-quantity',qty);
 	});
 	
