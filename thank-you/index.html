@@ -1,0 +1,44 @@
+---
+layout: default
+title: Thank You
+description: Your about to get more compliments than you can handle
+---
+<section class="thank-you">
+	<!--<p><strong>Congratulations</strong> Your about to start getting more compliments than you know what to do with, but first...</p>-->
+	<!--<h1>You need to mail us your shirt(s)</h1>-->
+	<h2>Congratulations! Your order has bee placed. Now all you need to do is...</h2>
+	<h1>Mail Us Your Shirt(s)</h1>
+	<ul>
+		<li>
+			<hgroup>
+				<h3><span>1</span>Packaging</h3>
+				<p>Use an envelope from USPS (or a box if your sending multiple shirts). Don't worry to much about wrinkles, we'll make sure your shirt(s) are pressed and folded when you get them back.</p>
+			</hgroup>
+			<section>
+				<img src="/images/illustrations/shipping/packaging.png" alt="packaging" />
+			</section>
+		</li>
+		<li>
+			<hgroup>
+				<h3><span>2</span>Order Number</h3>
+				<p>Don't forget to include your order number (we need it to identify who the shirt(s) belong to). You can print your receipt and send it with the package or just write it down on a hundred dollar bill. Whatever you do, just remember, unidentified shirts are considered a donation and will be added to our personal closets. ;)</p>
+			</hgroup>
+			<section class="order-number" id="order-number">See Receipt</section>
+		</li>
+		<li>
+			<hgroup>
+				<h3><span>3</span>Mailing Address</h3>
+				<p>Be sure to mail your shirts to P.O. Box 2386, Centennial Park AZ 86021. We usually have shirts tailored and back on their way to you within 24 hours but that depends on our level of demand. So no guarantees but you'll probably be wearing your new favorite shirt within less than a week of mailing it out.</p>
+			</hgroup>
+			<section class="mailing-address">
+				<p>P.O. Box 2386<br /> Centennial Park AZ 86021</p>
+			</section>
+		</li>
+	</ul>
+</section>
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		$('#order-number').html(persistentQueryString['orderid']);	
+	});
+</script>

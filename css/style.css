@@ -493,6 +493,7 @@ body > header > div > nav > a:hover {
 /* @group Thank You */
 .content section.thank-you {
 	max-width: 960px;
+	padding: 96px 0 0 0;
 	align-content: #000;
 	text-align: center;
 }
