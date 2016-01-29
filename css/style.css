@@ -82,12 +82,13 @@ a:hover {
 }
 
 .button.red{
+	background: #d64336;
 	border-color: #d64336;
-	color: #d64336;
+	color: #fff;
 }
 .button.red:hover {
-	background: #d64336;
-	color: #fff;
+	background: #b83125;
+	border-color: #b83125;
 }
 
 
@@ -291,7 +292,7 @@ body > header > div > nav > a:hover {
 .process {
 	position: relative;
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 96px 0;
 	text-align: center;
 	background: #d64336;
 	white-space: nowrap;
@@ -307,6 +308,11 @@ body > header > div > nav > a:hover {
 	background: #d64336;
 	transform: rotate(45deg);
 }
+.process > h3 {
+	margin: 0 0 48px 0;
+	color: #fff;
+	font: 200 36px/48px Georgia, "Times New Roman", Times, serif;
+}
 .process > div {
 	display: inline-block;
 	width: 33%;
@@ -314,16 +320,41 @@ body > header > div > nav > a:hover {
 	text-align: center;
 	vertical-align: top;
 }
+.process > div+div {
+	/*margin-left: 42px;*/
+}
 .process > div > img {
 	display: block;
 	width: 100%;
-	max-width: 120px;
-	margin: 0 auto;
+	max-width: 150px;
+	margin: 0 auto 24px auto;
+	/*border-bottom: 5px solid #fff;*/
 }
 .process > div > h5 {
-	font: 500 16px/24px Georgia, "Times New Roman", Times, serif;
+	margin: 0 0 6px 0;
+	font: 500 24px/36px Georgia, "Times New Roman", Times, serif;
 	color: #fff;
 	white-space: normal;
+	/*text-align: left;*/
+	letter-spacing: 1px;
+}
+.process > div > h5 > span {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0 12px 0 0;
+	border-radius: 24px;
+	background: #fff;
+	font: 500 16px/21px Georgia, "Times New Roman", Times, serif;
+	color: #d64336;
+	text-align: center;
+	vertical-align: text-bottom;
+}
+.process > div > p {
+	font: 200 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: rgba(255,255,255,.75);
+	white-space: normal;
+	/*text-align: left;*/
 }
 /* @end */
 
@@ -501,14 +532,15 @@ body > header > div > nav > a:hover {
 	margin: 0 0 48px 0;
 	padding: 0 24px;
 	text-transform: uppercase;
-	font-size: 42px;
+	font-size: 30px;
 	line-height: 60px;
 	white-space: normal;
 	/*text-align: center;*/
 }
 .thank-you > h2 {
 	padding: 0 24px;
-	font: 400 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 200 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
 }
 .thank-you > p {
 	/*margin: 0 0 48px 0;*/
@@ -968,6 +1000,15 @@ footer > div > nav > a:hover {
 }
 .blogposts > li+li {
 	margin: 0;
+}
+
+
+.process > div {
+	display: block;
+	margin: 0 auto;
+}
+.process > div+div {
+	margin: 48px auto 0 auto;
 }
 }
 
