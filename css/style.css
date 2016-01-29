@@ -387,6 +387,8 @@ body > header > div > nav > a:hover {
 	padding: 60px 0;
 	vertical-align: middle;
 }
+
+
 .measure > .image > .measurements {
 	position: relative;
 	width: 100%;
@@ -441,67 +443,54 @@ body > header > div > nav > a:hover {
 	margin: 0 0 18px 0;
 	text-align: left;
 }
-/*.measure > form > label:after {
-	content:'"';
-	font: 900 36px/48px "Lucida Grande", Lucida, Verdana, sans-serif;
-}*/
 .measure > form > label > span {
 	display: block;
 	width: 60px;
-	font: 100 12px/12px Georgia, "Times New Roman", Times, serif;
+	font: 100 14px/18px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 2px;
 }
 .measure > form > label > input {
 	width: 100%;
-	padding: 0 12px;
+	padding: 0 24px 0 12px;
 	border: 2px solid #000;
 	border-radius: 3px;
 	outline: none;
 	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
-}
-.measure > form > label:after {
-	content: 'In';
-	position: absolute;
-	bottom: 14px;
-	right: 6px;
-	font: 400 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 2px;
-	color: #ccc;
-	text-transform: uppercase;
+	color: #d64336;
 }
 .measure > form > label > input:focus {
 	border-color: #d64336;
 	outline: none;
 }
-.measure > form > .button {
-	margin-top: 24px;
+.measure > form > label > i {
+	position: absolute;
+	bottom: 12px;
+	right: 6px;
+	font-size: 14px;
 }
+/*.measure > form > label:after {
+	content: '';
+	position: absolute;
+	bottom: 14px;
+	right: 6px;
+	font: 200 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+	color: #666;
+	text-transform: capitalize;
+}*/
+
+
 
 
 
 .measure > .add-to-cart {
 	margin: 48px 0 0 0;
 }
-.measure > .add-to-cart > label {
-	position: relative;
-	display: block;
-	margin: 12px 0;
-}
-.measure > .add-to-cart > label > span {
-	
-}
-.measure > .add-to-cart > label > input {
-	width: 150px;
-	padding: 0 24px;
-	border: 2px solid #000;
-	border-radius: 3px;
-	outline: none;
-	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: center;
-}
+
 .measure > .add-to-cart > h3 {
-	font: 200 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 900 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*letter-spacing: 2px;*/
 }
 .measure > .add-to-cart > h3:before {
 	content: '$';
@@ -509,12 +498,44 @@ body > header > div > nav > a:hover {
 .measure > .add-to-cart > h3:after {
 	content: '/Shirt';
 	position: relative;
+	margin: 0 0 0 6px;
 	/*top: -6px;*/
-	font-size: 18px;
+	font-size: 36px;
 	font-weight: 100;
 	/*vertical-align: middle;*/
 	/*text-decoration: underline;*/
 }
+
+.measure > .add-to-cart > label {
+	display: inline-block!important;
+	position: relative;
+	display: block;
+	margin: 12px 0;
+}
+.measure > .add-to-cart > label > span {
+	position: absolute;
+	left: 12px;
+	top: 8px;
+	font: 14px/24px Georgia, "Times New Roman", Times, serif;
+}
+.measure > .add-to-cart > label > input {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 0 24px 0 48px;
+	border: 2px solid #000;
+	border-radius: 3px;
+	outline: none;
+	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+}
+.measure > .add-to-cart > a.button {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 12px 24px;
+}
+
 /* @end */
 
 
@@ -1067,21 +1088,11 @@ body > header > div > nav {
 .banner > hgroup > .button {
 	display: none;
 }
-.process {
-	padding: 30px;
-}
-.process > div {
-	width: 33%;
-	margin: 0 0 12px 0;
-}
-.process > div > img {
-	max-width: 72px;
-}
 
 
 
 .measure > .image {
-	width: 50%;
+	width: 60%;
 }
 .measure > .image > h3 {
 	
