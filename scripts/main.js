@@ -3,7 +3,7 @@ $(function() {
 	$(document).ready(function(){
 	
 		// Open overlay
-		$(".overlay > .close-overlay").click(function(){
+		$("#close-overlay").click(function(){
 		    $(".overlay").toggleClass("visible");
 		});
 		

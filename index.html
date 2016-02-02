@@ -14,7 +14,6 @@ class: home
 	</hgroup>
 	<img class="right" src="/images/photos/tailored-fit.png" alt="" />
 </div>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <div class="process" id="process">
 <h3>Here's how it works</h3>
@@ -69,7 +68,7 @@ class: home
 			<input type="text" name="bicep" id="bicep" value="" />
 			<!--<i class="fa fa-quote-right"></i>-->
 		</label>
-		<span id="open-overlay">How To Measure?</span>
+		<span id="open-overlay">VIDEO: How To Measure</span>
 	</form>
 	<br />
 	<div class="add-to-cart">
@@ -105,14 +104,14 @@ class: home
 
 
 
-<div class="overlay" id="measure-video">
+<div class="overlay">
 	<span class="close-overlay" id="close-overlay">X</span>
 	<div class="video-wrapper">
-		<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1QlkMzSouHM" frameborder="0" allowfullscreen></iframe>
+		<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1QlkMzSouHM?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 	</div>	
 </div>
 
-<script>
+<script type="text/javascript">
 	// https://developers.google.com/youtube/iframe_api_reference
 	
 	// global variable for the player
@@ -149,12 +148,10 @@ class: home
 	tag.src = "//www.youtube.com/player_api";
 	var firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-</script>
-
-
-
-
-<script type="text/javascript">
+	
+	
+	
+	
 	jQuery(document).ready(function() {
 		$('input#chest').val(persistentQueryString['ccs-chest-measurement']);
 		$('input#waist').val(persistentQueryString['ccs-waist-measurement']);
@@ -231,4 +228,6 @@ class: home
 		var url = '/thankyou?order=' + order.token + '&orderid=' + order.invoiceNumber;
 		window.location.href = url;
 	});
+
+	
 </script>

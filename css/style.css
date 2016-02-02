@@ -457,6 +457,11 @@ body > header > div > nav > a:hover {
 	width: 120px;
 	vertical-align: middle;
 }
+.measure > form > span {
+	font: 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #d64336;
+	cursor: pointer;
+}
 .measure > form > label {
 	position: relative;
 	display: block;
