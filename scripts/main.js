@@ -11,18 +11,37 @@ $(function() {
 		$("#open-overlay").click(function(){
 		    $(".overlay").toggleClass("visible");
 		});
+//		
+//		$("body > header > div > .menu-button").click(function(){
+//		    $("body > header > div > nav").toggleClass("visible");
+//		});
 		
-		$("body > header > div > .menu-button").click(function(){
-		    $("body > header > div > nav").toggleClass("visible");
-		});
-		
-		mixpanel.track('Viewed', {
-	//	    'page name' : document.title,
-		    'url' : window.location.pathname
-		});
+//		mixpanel.track('Viewed', {
+//	//	    'page name' : document.title,
+//		    'url' : window.location.pathname
+//		});
 		
 		
 	});
+	
+	
+	
+	// Scroll To #
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	
 	
 	
 	// Find all YouTube videos
@@ -61,5 +80,10 @@ $(function() {
 
 	// Kick off one resize to fix all videos on page load
 	}).resize();
-
+	
+	
+	
+	
+	
+	
 });
