@@ -2,6 +2,7 @@
 layout: default
 title: Custom Cut Shirts
 description: We make your baggy shirts fit better
+price: 29.95
 class: home
 ---
 <div class="banner home">
@@ -32,7 +33,7 @@ class: home
 		<h5><span>3</span>Modify</h5>
 		<p>We’ll take the sides/sleeves in and have your shirt back to you within a few days.</p>
 	</div>
-</div>
+</div> 
 
 <section class="measure">
 	<h3>What's your size?</h3>
@@ -72,7 +73,7 @@ class: home
 	</form>
 	<br />
 	<div class="add-to-cart">
-		<h3 id="price">20</h3>
+		<h3 id="price">{{ page.price }}</h3>
 		<label>
 			<span>Qty.</span>
 			<input type="number" name="qty" id="qty" value="1" />
@@ -81,7 +82,7 @@ class: home
 		    class="snipcart-add-item button red"
 		    data-item-id="1"
 		    data-item-name="Custom Tailored Shirt"
-		    data-item-price="20.00"
+		    data-item-price="{{ page.price }}"
 		    data-item-weight="1"
 		    data-item-url="http://customcutshirts.com"
 		    data-item-description="Kinda like a warm hug"
@@ -162,12 +163,38 @@ class: home
 	
 		
 	// Quantity
+	
 	$( "input#qty").change(function() {
-	  var qty = $('input#qty').val();
-	  
-	  $('#price').html(Math.max((20-qty+1), 15));
-	  $('.snipcart-add-item').data('item-quantity',qty);
+		var qty = $('input#qty').val();
+		$('#price').html(
+			Math.max(
+				(({{ page.price }}-((qty*2)-2))), 
+				{{ page.price }}-10
+			)
+		);
+		$('.snipcart-add-item').data('item-quantity',qty);
 	});
+	
+//	if (qty > 1) {
+//	    $( "input#qty").change(function() {
+//			
+//	    	$('#price').html(
+//	    		Math.max(
+//	    			(({{ page.price }}-(qty*2))), 
+//	    			{{ page.price }}-10
+//	    		)
+//	    	);
+//	    	$('.snipcart-add-item').data('item-quantity',qty);
+//	    });
+//	} else { 
+//		$( "input#qty").change(function() {
+//			
+//			$('#price').html( 1 );
+//			$('.snipcart-add-item').data('item-quantity',qty);
+//		}); 
+//	}
+	
+	
 	
 	// chest
 	$( "input#chest").change(function() {
