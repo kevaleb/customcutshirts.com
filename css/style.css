@@ -587,6 +587,11 @@ body > header > div > nav > a.selected {
 	text-align: center;
 }
 
+
+.banner.home {
+	padding-top: 0;
+}
+
 /* @end */
 
 
