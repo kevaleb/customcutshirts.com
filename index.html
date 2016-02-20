@@ -11,7 +11,7 @@ class: home
 		<img src="/images/logos/logo.png" alt="Custom Cut Shirts Logo" />
 		<h1>Custom Cut Shirts</h1>
 		<h2>We make your baggy shirts fit better.</h2>
-		<a href="#process" class="button red">See How It's Done</a>
+		<a id="open-overlay" class="button red">Watch Video (15 Seconds)</a>
 	</hgroup>
 	<img class="right" src="/images/photos/tailored-fit.png" alt="" />
 </div>
@@ -36,7 +36,7 @@ class: home
 </div> 
 
 <section class="measure">
-	<h3>What's your size?</h3>
+	<h3>Enter Your Measurements?</h3>
 	<h4>Give us your true sizes... we'll add the proper amount of breathing room.</h4>
 	<div class="image">
 		<div class="measurements">
@@ -69,7 +69,7 @@ class: home
 			<input type="text" name="bicep" id="bicep" value="" />
 			<!--<i class="fa fa-quote-right"></i>-->
 		</label>
-		<span id="open-overlay">VIDEO: How To Measure</span>
+		<!--<span id="open-overlay">VIDEO: How To Measure</span>-->
 	</form>
 	<br />
 	<div class="add-to-cart">
@@ -108,7 +108,7 @@ class: home
 <div class="overlay">
 	<span class="close-overlay" id="close-overlay">X</span>
 	<div class="video-wrapper">
-		<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1QlkMzSouHM?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+		<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/nj-iDGfQKMg?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 	</div>	
 </div>
 
@@ -154,10 +154,10 @@ class: home
 	
 	
 	jQuery(document).ready(function() {
-		$('input#chest').val(persistentQueryString['ccs-chest-measurement']);
-		$('input#waist').val(persistentQueryString['ccs-waist-measurement']);
-		$('input#hips').val(persistentQueryString['ccs-hips-measurement']);
-		$('input#bicep').val(persistentQueryString['ccs-bicep-measurement']);
+//		$('input#chest').val(persistentQueryString['ccs-chest-measurement']);
+//		$('input#waist').val(persistentQueryString['ccs-waist-measurement']);
+//		$('input#hips').val(persistentQueryString['ccs-hips-measurement']);
+//		$('input#bicep').val(persistentQueryString['ccs-bicep-measurement']);
 	});
 	
 	
@@ -200,7 +200,7 @@ class: home
 	$( "input#chest").change(function() {
 	  var chest = $('input#chest').val();
 	  $('.snipcart-add-item').data('item-custom1-value',chest);
-	  localStorage["ccs-chest-measurement"] = jQuery("input#chest").val();
+//	  localStorage["ccs-chest-measurement"] = jQuery("input#chest").val();
 	});
 	
 	$( "input#chest" ).focus(function() {
@@ -214,7 +214,7 @@ class: home
 	$( "input#waist").change(function() {
 	  var waist = $('input#waist').val();
 	  $('.snipcart-add-item').data('item-custom2-value',waist);
-	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
+//	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
 	});
 	
 	$( "input#waist" ).focus(function() {
@@ -226,7 +226,7 @@ class: home
 	$( "input#hips").change(function() {
 	  var hips = $('input#hips').val();
 	  $('.snipcart-add-item').data('item-custom3-value',hips);
-	  localStorage["ccs-hips-measurement"] = jQuery("input#hips").val();
+//	  localStorage["ccs-hips-measurement"] = jQuery("input#hips").val();
 	});
 	
 	$( "input#hips" ).focus(function() {
@@ -238,7 +238,7 @@ class: home
 	$( "input#bicep").change(function() {
 	  var bicep = $('input#bicep').val();
 	  $('.snipcart-add-item').data('item-custom4-value',bicep);
-	  localStorage["ccs-bicep-measurement"] = jQuery("input#bicep").val();
+//	  localStorage["ccs-bicep-measurement"] = jQuery("input#bicep").val();
 	});
 	
 	$( "input#bicep" ).focus(function() {
