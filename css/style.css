@@ -230,7 +230,7 @@ body > header > div > nav > a.selected {
 	top: 0;
 	right: 0;
 }
-.banner:before {
+/*.banner:before {
 	display: none;
 	content: '\00a0';
 	position: absolute;
@@ -239,7 +239,7 @@ body > header > div > nav > a.selected {
 	width: 100%;
 	height: 100%;
 	background-image: radial-gradient(circle, rgba(0, 0, 0, .5) 0%, rgba(0,0,0,.75) 100%);	
-}
+}*/
 .banner:after {
 	content: '\00a0';
 	display: inline-block;
@@ -264,13 +264,13 @@ body > header > div > nav > a.selected {
 	text-align: center;
 }
 .banner > hgroup > img {
-	max-width: 240px;
-	margin: 0 auto 24px auto;
+	max-width: 150px;
+	margin: 0 auto 0px auto;
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
-	font:900 36px/48px Georgia, "Times New Roman", Times, serif;
-	letter-spacing: 3px;
+	font:400 18px/48px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
 	text-transform: uppercase;
 	color: #fff;
@@ -283,10 +283,11 @@ body > header > div > nav > a.selected {
 	font: 500 90px/96px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 .banner > hgroup > h2 {
-	margin: 0 0 48px 0;
-	font: 200 20px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*margin: 24px 0;*/
+	font: 100 24px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 2px;
 	color: rgba(255,255,255,1);
+	text-transform: capitalize;
 }
 .banner > hgroup > a > i {
 	font-size: 18px;
@@ -323,6 +324,123 @@ body > header > div > nav > a.selected {
 
 
 
+/* @group Home */
+
+/*.home > .main-header {
+	position: absolute;
+	bottom: 0px;
+}
+.home > .main-header > div > a {
+	display: none;
+}
+.home > .main-header > div > nav {
+	width: 100%;
+	text-align: center;
+}*/
+
+
+.banner.home {
+	padding-top: 0;
+}
+.banner.home > hgroup > h1 {
+	margin: 0 0 36px 0;
+	font:200 30px/48px Georgia, "Times New Roman", Times, serif;
+	text-transform: capitalize;
+}
+.banner.home > hgroup > h1 > strong {
+	display: block;
+	text-transform: uppercase;
+	font-size: 60px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Testimials */
+.testimonials {
+	bottom: 0;
+	width: 100%;
+	background: #e5e5e5;
+	text-align: center;
+}
+/*.testimonials > div {
+	width: 100%;
+}
+.testimonials > div > div {
+	width: 100%;
+}*/
+.testimonials > div > div > div {
+	width: 100%;
+}
+.testimonials .flickity-viewport {
+	overflow: visible;
+}
+.testimonials button {
+	display: none;
+}
+.testimonials .gallery-cell {
+	/*display: inline-block;*/
+	/*width: 30%;*/
+	width: 100%;
+	margin: -96px 0 0 0;
+	padding: 24px 24px 96px 24px;
+	/*text-align: center!important;*/
+	/*white-space: nowrap;*/
+	/*background: #fff;*/
+}
+.testimonials .gallery-cell > img {
+	/*display: none;*/
+	width: 150px;
+	/*margin: 0 0 36px 0;*/
+	border: 10px solid #e5e5e5;
+	border-radius: 100px;
+	vertical-align: middle;
+}
+.testimonials .gallery-cell > h4 {
+	margin: 0 0 24px 0;
+	font-size: 16px;
+	color: #d64336;
+}
+.testimonials .gallery-cell > h4:before {
+	/*content: '-- ';*/
+}
+.testimonials .gallery-cell > p {
+	position: relative;
+	/*max-width: 480px;*/
+	display: inline-block;
+	padding: 0  24px;
+	/*border-left: 3px solid #fff;*/
+	/*text-align: left;*/
+	vertical-align: middle;
+	white-space: normal;
+	font: 200 20px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+	color: #333;
+}
+.testimonials .gallery-cell > p > i {
+	position: absolute;
+	top: 9px;
+	left: 0;
+	font-size: 16px;
+}
+.testimonials .gallery-cell > p > i~i {
+	left: auto;
+	right: 0;
+}
+/*.testimonials .gallery-cell > p:before,
+.testimonials .gallery-cell > p:after {
+	content: '"';
+	font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}*/
+
+/* @end */
+
 /* @group Process */
 .process {
 	position: relative;
@@ -331,6 +449,7 @@ body > header > div > nav > a.selected {
 	text-align: center;
 	background: #d64336;
 	/*white-space: nowrap;*/
+	counter-reset: my-badass-counter;
 }
 .process:after {
 	content: '\00a0';
@@ -344,14 +463,14 @@ body > header > div > nav > a.selected {
 	transform: rotate(45deg);
 }
 .process > h3 {
-	margin: 0 0 48px 0;
+	margin: 0 0 96px 0;
 	color: #fff;
 	font: 200 36px/48px Georgia, "Times New Roman", Times, serif;
 }
 .process > div {
 	display: inline-block;
-	width: 33%;
-	max-width: 240px;
+	width: 30%;
+	max-width: 320px;
 	text-align: center;
 	vertical-align: top;
 }
@@ -361,11 +480,12 @@ body > header > div > nav > a.selected {
 .process > div > img {
 	display: block;
 	width: 100%;
-	max-width: 150px;
+	max-width: 350px;
 	margin: 0 auto 24px auto;
 	/*border-bottom: 5px solid #fff;*/
 }
 .process > div > h5 {
+	/*display: none;*/
 	margin: 0 0 6px 0;
 	font: 500 24px/36px Georgia, "Times New Roman", Times, serif;
 	color: #fff;
@@ -386,11 +506,32 @@ body > header > div > nav > a.selected {
 	vertical-align: text-bottom;
 }
 .process > div > p {
+	position: relative;
+	/*padding: 0 0 0 48px;*/
 	font: 200 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: rgba(255,255,255,.75);
 	white-space: normal;
+	letter-spacing: 1px;
 	/*text-align: left;*/
 }
+/*.process > div > p:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	
+	position: absolute;
+	top: 6px;
+	left: 0px;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	/*margin: -12px 12px 0 0;*!/
+	/*border-radius: 24px;*!/
+	background: #fff;
+	font: 500 14px/36px Georgia, "Times New Roman", Times, serif;
+	color: #d64336;
+	text-align: center;
+	vertical-align: text-bottom;
+}*/
 /* @end */
 
 
@@ -583,26 +724,7 @@ body > header > div > nav > a.selected {
 
 
 
-/* @group Home */
 
-.home > .main-header {
-	position: absolute;
-	bottom: 0px;
-}
-.home > .main-header > div > a {
-	display: none;
-}
-.home > .main-header > div > nav {
-	width: 100%;
-	text-align: center;
-}
-
-
-.banner.home {
-	padding-top: 0;
-}
-
-/* @end */
 
 
 
@@ -1296,11 +1418,38 @@ body > header > div > nav {
 	height: 100%;
 }
 
+section.measure {
+	padding:24px 24px 96px 24px;
+}
+
+.process > h3 {
+	margin: 0 0 48px 0;
+}
+.process > div+div{
+	margin-top: 150px;
+}
+.process > div > img {
+	margin: 0;
+}
+.process > div > h5 {
+	display: block;
+}
+.process > div > p {
+	position: static;
+	text-align: center;
+}
 
 
 
 
-
+.banner.home > hgroup > h1 {
+	margin: 0 0 36px 0;
+	font:200 24px/48px Georgia, "Times New Roman", Times, serif;
+	text-transform: capitalize;
+}
+.banner.home > hgroup > h1 > strong {
+	font-size: 48px;
+}
 
 }
 
