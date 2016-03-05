@@ -2,7 +2,7 @@
 layout: default
 title: Custom Cut Shirts
 description: We make your baggy shirts fit better
-price: 29.95
+price: 19.95
 class: home
 ---
 <div class="banner home">
@@ -11,7 +11,7 @@ class: home
 		<!--<img src="/images/logos/logo.png" alt="Custom Cut Shirts Logo" />-->
 		<!--<h1>Custom Cut Shirts</h1>-->
 		<h1>We make your baggy shirts <strong>fit better</strong></h1>
-		<a id="open-overlay" class="button red">Watch Video<i class="fa fa-play"></i></a>
+		<a id="open-overlay" class="button red">Watch Video (15 Sec.)<i class="fa fa-play"></i></a>
 	</hgroup>
 	<img class="right" src="/images/photos/tailored-fit.png" alt="" />
 </div>
@@ -26,7 +26,7 @@ class: home
 	<div class="wide">
 		<img src="/images/illustrations/process/take-in.png" alt="UX Design"/>
 		<h5><span>2</span>Take It In</h5>
-		<p>We'll take in the sides/arms leaving just enough of wiggle room.</p>
+		<p>We'll take in the sides/arms leaving just enough wiggle room.</p>
 	</div>
 	<div>
 		<img src="/images/illustrations/process/perfect-fit.png" alt="Analytics" />
@@ -211,35 +211,29 @@ class: home
 		
 	// Quantity
 	
+//	$( "input#qty").change(function() {
+//		var qty = $('input#qty').val();
+//		$('#price').html(
+//			Math.max(
+//				(({{ page.price }}-((qty*2)-2))), 
+//				{{ page.price }}-10
+//			)
+//		);
+//		$('.snipcart-add-item').data('item-quantity',qty);
+//	});
+
 	$( "input#qty").change(function() {
 		var qty = $('input#qty').val();
 		$('#price').html(
 			Math.max(
-				(({{ page.price }}-((qty*2)-2))), 
-				{{ page.price }}-10
+				(({{ page.price }}-((qty)-1))), 
+				{{ page.price }}-4
 			)
 		);
 		$('.snipcart-add-item').data('item-quantity',qty);
 	});
 	
-//	if (qty > 1) {
-//	    $( "input#qty").change(function() {
-//			
-//	    	$('#price').html(
-//	    		Math.max(
-//	    			(({{ page.price }}-(qty*2))), 
-//	    			{{ page.price }}-10
-//	    		)
-//	    	);
-//	    	$('.snipcart-add-item').data('item-quantity',qty);
-//	    });
-//	} else { 
-//		$( "input#qty").change(function() {
-//			
-//			$('#price').html( 1 );
-//			$('.snipcart-add-item').data('item-quantity',qty);
-//		}); 
-//	}
+
 	
 	
 	
