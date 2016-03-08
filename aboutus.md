@@ -7,6 +7,7 @@ navtitle: about
 bannerBackground:
 ---
 
+
 Our story started when I was born with long skinny legs, gangly arms, and an average build in the chest and shoulders… I’m pretty fit now, about 5’ 11” and 180 pounds, and from the age of 10 on when I started buying my own clothes, no offense mom, I just couldn’t take it anymore, I’ve begun to have the problem of fit.
 
 If you get a good shirt, collar fits, sleeves and length is good, it inevitably looks like a moomoo around the chest. If I get something that fits my waist and chest, it ends up as high waters around the wrists and hips. It was always a battle.
