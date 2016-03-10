@@ -1,0 +1,72 @@
+---
+layout: default
+title: Free Fitting
+description: Your about to get more compliments than you can handle
+navtitle: thanks
+---
+<div class="banner half">
+	<hgroup class="">
+		<h1>Congratulations!</h1>
+	</hgroup>
+</div>
+
+<section>
+	<article>
+		<p>We're creating a special coupon code that you can use to get your first shirt tailored for free. We'll email it to as soon as it's ready.</p>
+		
+		<p>While your waiting you should start taking your measurements (you'll need them when you place your order).</p>
+		<p><a href="#" id="open-overlay">Heres a video</a> that shows an easy way to take your measurements.</p>
+		<p>And <a href="http://www.amazon.com/uxcell%C2%AE-Tailor-Flexible-Measure-4-92Ft/dp/B008MN2OC4/ref=sr_1_9" target="_blank">Heres a link</a> to purchase a measuring tape from amazon... in case you don't already have one.</p>
+		<br /><br />
+		<p>If you have any questions please don't hesitate to email me: <strong>kevin@customcutshirts.com</strong> or shoot me a text: <strong>(435) 212-3705</strong> </p>
+		<p>Thank you for your interest.</p>
+		<p>-- Kevin LeBaron</p>
+	</article>
+</section>
+
+
+<div class="overlay">
+	<span class="close-overlay" id="close-overlay">X</span>
+	<div class="video-wrapper">
+		<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1QlkMzSouHM?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+	</div>	
+</div>
+
+<script type="text/javascript">
+	// https://developers.google.com/youtube/iframe_api_reference
+	
+	// global variable for the player
+	var player;
+	
+	// this function gets called when API is ready to use
+	function onYouTubePlayerAPIReady() {
+	  // create the global player from the specific iframe (#video)
+	  player = new YT.Player('video', {
+	    events: {
+	      // call this function when player is ready to use
+	      'onReady': onPlayerReady
+	    }
+	  });
+	}
+	
+	function onPlayerReady(event) {
+	  
+	  // bind events
+	  var playButton = document.getElementById("open-overlay");
+	  playButton.addEventListener("click", function() {
+	    player.playVideo();
+	  });
+	  
+	  var pauseButton = document.getElementById("close-overlay");
+	  pauseButton.addEventListener("click", function() {
+	    player.pauseVideo();
+	  });
+	  
+	}
+	
+	// Inject YouTube API script
+	var tag = document.createElement('script');
+	tag.src = "//www.youtube.com/player_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
