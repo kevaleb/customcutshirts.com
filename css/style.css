@@ -134,6 +134,7 @@ body > header > div > a {
 	font: 24px/36px Georgia, "Times New Roman", Times, serif;
 	text-decoration: none;
 	color: #fff;
+	background: #;
 }
 body > header > div > a:hover {
 	color: #fff;
@@ -218,6 +219,22 @@ body > header > div > nav > a.selected {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+.content .banner.half.blog-post {
+	height: 50%;
+	background-color: #000;
+	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
+	background-attachment:scroll;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	box-shadow: 0 75px 75px rgba(0,0,0,.75) inset;
+}
+.content .banner.half.blog-post > hgroup > h1 {
+	background: #000;
+	float: left;
+	padding: 12px 24px;
+}
+
 .banner > img {
 	position: absolute;
 	height: 100%;
@@ -890,7 +907,7 @@ body > header > div > nav > a.selected {
 	/*padding: 12px;*/
 	vertical-align: middle;
 }
-.faq > section > h2:after {
+/*.faq > section > h2:after {
 	content: '\00a0';
 	position: absolute;
 	left: 12px;
@@ -900,11 +917,14 @@ body > header > div > nav > a.selected {
 	-webkit-transform: rotate(45deg);
 	background: #d64336;
 	
-}
+}*/
 .faq > section > p {
 	position: relative;
-	border-top: 4px solid #d64336;
+	padding: 0 0 0 24px;
+	border-left: 6px solid #d64336;
 	background: #fff;
+	font: 200 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
 }
 
 /* @end */
@@ -994,18 +1014,19 @@ body > header > div > nav > a.selected {
 	margin: 0 auto;
 	padding: 96px 0px;
 	list-style: none;
+	text-align: left;
 }
 .blogposts > li {
 	display: inline-block;
-	max-width: 30%;
-	margin: 0 -.25em 0 0;
+	max-width: 48%;
+	margin: 0 -.25em 4% 0;
 	background: #fff;
 	border: 1px solid #ccc;
 	border-top: none;
 	vertical-align: top;
 }
-.blogposts > li+li {
-	margin-left: 5%;
+.blogposts > li:nth-last-of-type(even) {
+	margin-left: 4%;
 }
 .blogposts > li > a {
 	display: block;
@@ -1016,7 +1037,7 @@ body > header > div > nav > a.selected {
 	height: 150px;
 	margin: -24px -24px 24px -24px;
 	background-color: #000;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -1332,25 +1353,23 @@ footer > div > nav > a:hover {
 }
 
 .blogposts {
-	padding: 48px;
+	/*padding: 48px;*/
 }
 .blogposts > li {
-	max-width: 45%;	
+	/*max-width: 45%;	*/
 }
-.blogposts > li+li {
+/*.blogposts > li+li {
 	margin: 0 -.25em 0 10%;
-}
+}*/
 
 
 .blogposts {
 	padding: 48px;
 }
-.blogposts > li {
+.blogposts > li,
+.blogposts > li:nth-last-of-type(even) {
 	max-width: 100%;
-	margin: 0 0 48px;
-}
-.blogposts > li+li {
-	margin: 0;
+	margin: 0 0 48px 0;
 }
 
 
@@ -1362,6 +1381,13 @@ footer > div > nav > a:hover {
 }
 .process > div+div {
 	margin: 48px auto 0 auto;
+}
+
+
+
+
+.faq > section {
+	padding: 48px;
 }
 }
 
@@ -1498,9 +1524,14 @@ section.measure {
 	text-transform: capitalize;
 }
 .banner.home > hgroup > h1 > strong {
-	font-size: 48px;
+	font-size: 36px;
 }
-
+.banner.home > hgroup > h2 {
+	display: block;
+	margin: 0 auto;
+	font-size: 16px;
+	max-width: 200px;
+}
 
 
 .free-fitting {
