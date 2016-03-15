@@ -218,8 +218,7 @@ body > header > div > nav > a.selected {
 	background-attachment:scroll;
 	background-size: contain;
 	background-repeat: no-repeat;
-}
-.content .banner.half.blog-post {
+	
 	height: 50%;
 	background-color: #000;
 	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
@@ -229,7 +228,10 @@ body > header > div > nav > a.selected {
 	background-position: center bottom;
 	box-shadow: 0 75px 75px rgba(0,0,0,.75) inset;
 }
-.content .banner.half.blog-post > hgroup > h1 {
+.content .banner.half.blog-post {
+	
+}
+.content .banner.half > hgroup > h1 {
 	background: #000;
 	float: left;
 	padding: 12px 24px;
@@ -309,9 +311,12 @@ body > header > div > nav > a.selected {
 }
 
 
+
+
 .banner > nav {
 	position: absolute;
 	bottom: 0;
+	right: 0;
 	width: 100%;
 	padding: 24px;
 }
@@ -326,6 +331,78 @@ body > header > div > nav > a.selected {
 .banner > nav > a:hover {
 	color: #d64336;	
 }
+
+
+.banner > hgroup.video {
+	
+}
+.banner > hgroup.video > h1 {
+	position: relative;
+	padding: 0 96px 0 0;
+	
+}
+
+/* @end */
+
+
+
+/* @group Video Controls */
+hgroup.video {
+	text-align: left;
+}
+.video-controls {
+	display: inline-block;
+	background: #d64336;
+	padding: 0 72px 0 0;
+	white-space: normal;
+	cursor: pointer;
+	-webkit-transition: padding .2s ease-out 0s;
+}
+.video-controls > h1 {
+	position: relative;
+	padding: 12px 24px;
+	background: #000;
+	display: block;
+	color: #fff;
+}
+.video-controls > h1 > .video-play {
+	/*position: relative;*/
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	width: 72px;
+	height: 72px;
+	margin: -36px 0 0 0;
+	font: 900 48px/72px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	-webkit-transition: width .5s ease-in-out 0s;
+	/*overflow: hidden;*/
+}
+.video-controls > h1 > .video-play > .video-cta {
+	display: block;
+	font: 100 11px/11px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 2px;
+	color: #fff;
+	white-space: nowrap;
+	opacity: 0;
+	-webkit-transition: opacity .2s ease-out 0s;
+}
+
+
+
+.video-controls:hover{
+	padding: 0 96px 0 0;
+}
+.video-controls:hover .video-play {
+	width: 96px;
+	-webkit-transition: width .5s ease-in-out 0s;
+}
+.video-controls:hover > h1 > .video-play > .video-cta {
+	opacity: 1;
+}
+
 
 /* @end */
 /* @end */
@@ -1068,7 +1145,7 @@ body > header > div > nav > a.selected {
 article {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 36px;
+	padding: 36px 0;
 }
 
 
@@ -1345,22 +1422,28 @@ footer > div > nav > a:hover {
 
 
 
+@media all and (max-width: 1080px) {
+
+.content .banner.half.blog-post{
+	
+}
+
+
+
+
+article {
+	padding: 36px;
+}
+
+}
+
+
+
 
 @media all and (max-width: 720px) {
-
 .banner > img {
 	opacity: .5;
 }
-
-.blogposts {
-	/*padding: 48px;*/
-}
-.blogposts > li {
-	/*max-width: 45%;	*/
-}
-/*.blogposts > li+li {
-	margin: 0 -.25em 0 10%;
-}*/
 
 
 .blogposts {
@@ -1385,7 +1468,6 @@ footer > div > nav > a:hover {
 
 
 
-
 .faq > section {
 	padding: 48px;
 }
@@ -1397,11 +1479,11 @@ footer > div > nav > a:hover {
 
 
 @media all and (max-width: 540px) {
-body > header {
+/*body > header {
 	
 }
 body > header > div > a {
-	/*position: relative;*/
+	/*position: relative;*!/
 	display: block;
 }
 body > header > div > a > span {
@@ -1416,7 +1498,7 @@ body > header > div > nav {
 	position: absolute;
 	bottom: auto;
 	top: 0;
-}
+}*/
 
 
 
@@ -1424,7 +1506,7 @@ body > header > div > nav {
 	height: auto;
 }
 .banner::after {
-	display: none;
+	/*display: none;*/
 }
 .banner > img {
 	height: auto;
