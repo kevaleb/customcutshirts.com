@@ -4,3 +4,5 @@ collections:
 collections:
   reports:
     output: true
+  products:
+    output: true

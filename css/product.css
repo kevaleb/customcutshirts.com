@@ -1,0 +1,246 @@
+/* @override http://0.0.0.0:4000/css/product.css */
+
+
+/* @group Product */
+.product-options {
+	margin: 96px auto;
+	/*border: 2px solid #000;*/
+	background: #fff;
+	text-align: center;
+	white-space: nowrap;
+}
+
+
+
+/* @group H Group */
+.product-options > section > hgroup > h3 {
+	font: 200 36px/48px Georgia, "Times New Roman", Times, serif;
+	color: #000;
+	white-space: normal;
+}
+.product-options > section > hgroup > h4 {
+	padding: 0 24px;
+	font: 200 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	white-space: normal;
+}
+/* @end */
+
+
+
+
+
+
+/* @group ILLUSTRATION */
+.product-options > section > .illustration {
+	display: inline-block;
+	width: 320px;
+	padding: 60px 0;
+	vertical-align: middle;
+}
+
+
+.product-options > section > .illustration > div {
+	position: relative;
+	width: 100%;
+}
+.product-options > section > .illustration > div > img {
+	width: 100%;
+}
+.product-options > section > .illustration > div > img.size {
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: all .3s ease-out 0s;
+	width: 100%;
+	left: 0;
+	top: -6px;
+}
+.product-options > section > .illustration > div > img.size.visible {
+	opacity: 1;
+	top: 0px;
+	-webkit-transition: all .75s ease-in 0s;
+}
+.product-options > section > .illustration > div > p {
+	position: absolute;
+	top: 100%;
+	left: -6px;
+	width: 100%;
+	margin: 0px 0 0 0;
+	padding: 0 24px;
+	white-space: normal;
+	opacity: 0;
+	-webkit-transition: all .3s ease-in 0s;
+	font: 400 12px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+	letter-spacing: 1px;
+}
+.product-options > section > .illustration > div > img.visible+p {
+	opacity: 1;
+	left: 0;
+	-webkit-transition: all .5s ease-out 0s;
+}
+/* @end */
+
+
+
+
+
+
+/* @group FORM - Sizes */
+
+.product-options > section > form.sizes {
+	/*max-width: 480px;*/
+	margin: 48px auto 0 auto;
+	white-space: normal;
+}
+.product-options > section > form.sizes > label {
+	position: relative;
+	display: block;
+	margin: 0 0 24px 0;
+	text-align: left;
+}
+.product-options > section > form.sizes > label > span {
+	display: block;
+	width: 60px;
+	font: 100 14px/18px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+}
+.product-options > section > form.sizes > label > div {
+	display: inline-block;
+	margin: 6px 6px 6px 0;
+	padding: 3px 12px;
+	border-radius: 3px;
+	border: 2px solid #fff;
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	cursor: pointer;
+}
+.product-options > section > form.sizes > label > div:hover {
+	background: #d64336;
+	color: #fff;
+}
+.product-options > section > form.sizes > label > div.selected {
+	border-color: #d64336;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group FORM - Measurements*/
+.product-options > section > form.measurements {
+	display: inline-block;
+	width: 120px;
+	vertical-align: middle;
+}
+.product-options > section > form.measurements > span {
+	font: 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #d64336;
+	cursor: pointer;
+}
+.product-options > section > form.measurements > label {
+	position: relative;
+	display: block;
+	margin: 0 0 18px 0;
+	text-align: left;
+}
+.product-options > section > form.measurements > label > span {
+	display: block;
+	width: 60px;
+	font: 100 14px/18px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+}
+.product-options > section > form.measurements > label > input {
+	width: 100%;
+	padding: 0 48px 0 12px;
+	border: 2px solid #000;
+	border-radius: 3px;
+	outline: none;
+	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	color: #d64336;
+}
+.product-options > section > form.measurements > label > input:focus {
+	border-color: #d64336;
+	outline: none;
+}
+.product-options > section > form.measurements > label > i {
+	position: absolute;
+	bottom: 12px;
+	right: 6px;
+	font-size: 14px;
+}
+.product-options > section > form.measurements > label:after {
+	content: 'Inches';
+	position: absolute;
+	bottom: 14px;
+	right: 6px;
+	font: 200 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+	color: #666;
+	text-transform: capitalize;
+}
+/* @end */
+
+
+
+
+
+
+/* @group Buttons */
+.product-options > section > .buttons {
+	margin: 48px 0 0 0;
+}
+
+.product-options > section > .buttons > h3 {
+	font: 900 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*letter-spacing: 2px;*/
+}
+.product-options > section > .buttons > h3:before {
+	content: '$';
+}
+.product-options > section > .buttons > h3:after {
+	content: '/Shirt';
+	position: relative;
+	margin: 0 0 0 6px;
+	/*top: -6px;*/
+	font-size: 36px;
+	font-weight: 100;
+	/*vertical-align: middle;*/
+	/*text-decoration: underline;*/
+}
+
+.product-options > section > .buttons > label {
+	display: inline-block!important;
+	position: relative;
+	display: block;
+	margin: 12px 0;
+}
+.product-options > section > .buttons > label > span {
+	position: absolute;
+	left: 12px;
+	top: 8px;
+	font: 14px/24px Georgia, "Times New Roman", Times, serif;
+}
+.product-options > section > .buttons > label > input {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 0 24px 0 48px;
+	border: 2px solid #000;
+	border-radius: 3px;
+	outline: none;
+	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+}
+.product-options > section > .buttons > a.button {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 12px 24px;
+}
+/* @end */
+
+/* @end */
