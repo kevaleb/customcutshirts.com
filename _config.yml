@@ -2,7 +2,7 @@ name: Custom Cut Shirts
 collections:
   - reports
 collections:
-  reports:
-    output: true
   products:
+    output: true
+  main-pages:
     output: true

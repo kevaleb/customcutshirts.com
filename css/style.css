@@ -118,64 +118,254 @@ a:hover {
 
 /* @end */
 
-/* @group HEADER */
-body > header {
-	position: absolute;
-	z-index: 100000000;
-	width: 100%;
-	height: 60px;
-	padding: 12px;
+
+
+
+
+
+/* @group header */
+header {
+	position: fixed;
+	z-index: 100000;
+	left: -250px;
+	top: 0;
+	height: 100%;
+	width: 250px;
+	padding: 250px 24px 0px 24px;
+	background: #111;
+	/*background: #000 url('/images/banners/left-nav.jpg') no-repeat left top;*/
+	background-size: cover;
+	background-position: center;
 	text-align: center;
+	border-right: 1px solid rgba(255,255,255,.12);
+	-webkit-transition: all .3s ease-in-out 0s;
+	        transition: all .3s ease-in-out 0s;
 }
-body > header > div {
-	position: relative;
-	max-width: 800px;
-	margin: 0 auto;
-}
-body > header > div > a {
+header:before  {
+	content: '\00a0';
 	position: absolute;
-	left: 0px;
-	top: 0px;
-	font: 24px/36px Georgia, "Times New Roman", Times, serif;
-	text-decoration: none;
-	color: #fff;
-	background: #;
+	left: 50%;
+	top: 241px;
+	z-index: 100;
+	width: 18px;
+	height: 18px;
+	margin: 0 0 0 -9px;
+	background: #111;
+	border: 1px solid rgba(255,255,255,.15);
+	border-left: none;
+	border-top: none;
+	transform: rotate(45deg);
 }
-body > header > div > a:hover {
-	color: #fff;
-}
-body > header > div > a > img {
+
+
+/* @group Menu Button */
+header > .menu-button {
+	display: block;
+	position: absolute;
+	z-index: 10000000000;
+	right: -60px;
+	top: 12px;
+	width: 48px;
 	height: 36px;
-	vertical-align: middle;
+	cursor: pointer;
 }
-body > header > div > a > span {
-	vertical-align: middle;
-}
-
-
-
-body > header > div > nav {
-	text-align: right;
-	padding: 0 12px 0 0;
-}
-body > header > div > nav > p  {
-	display: none;
-}
-body > header > div > nav > a {
+header > .menu-button > span {
 	position: relative;
-	font: 200 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	display: block;
+	background: #fff;
+	height: 8px;
+	margin: 6px 0;
+	border-radius: 3px;
+	-webkit-transition: all 1s ease-in-out 0s;
+	        transition: all 1s ease-in-out 0s;
+	box-shadow: 0px 1px 3px rgba(0,0,0,.5);
+}
+
+/* @end */
+
+
+
+
+
+/* Logo */
+header > .logo {
+	position: absolute;
+	width: 100%;
+	height: 175px;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 24px 24px 48px 24px;
+	/*border-bottom: 1px dotted rgba(0,0,0,.15);*/
+	/*box-shadow: 0px 1px 0px rgba(255,255,255,.05);*/
+	/*background: #000;*/
+}
+header > .logo > a {
+	display: inline-block;
+	height: 100%;
+	margin: 0;
+	font: 100 16px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
 	color: #fff;
-	margin: 0 0 0 18px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+header > .logo > a > div {
+	display: inline-block;
+	font:900 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0px;
+}
+header > .logo > a > img {
+	max-width: 72%;
+	margin: -6px 0 0 0;
+}
+header > .logo > a > h1 {
+	margin: 6px 0 0 0;
+	font: bold 16px/16px Georgia, "Times New Roman", Times, serif;
+	color: #fff;
+}
+header > .logo > a > h1 > span {
+	font-size: 31px;
+	line-height: 36px;
+}
+
+
+
+
+
+
+/* @group Nav */
+
+header > nav {
+	position: relative;
+	height: 100%;
+	margin: 0;
+	padding: 24px 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	list-style: none;
+	border-top: 1px solid rgba(255,255,255,.15);
+	/*text-align: left;*/
+}
+header > nav > h3 {
+	margin: 24px 0 0 0;
+	font: 700 11px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	color: #ff6000;
+}
+header > nav > a {
+	padding: 0px 6px;
+	color: #fff;
+	border: 1px solid rgba(0,0,0,0);
+	display: block;
+	text-decoration: none;
+	font:200 18px/48px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: rgba(255,255,255,.75);
+	letter-spacing: 1px;
 	text-transform: capitalize;
 }
-body > header > div > nav > a:hover {
-	color:#d64336;
+header > nav > a:hover {
+	color: rgba(255,255,255,1);
 }
-body > header > div > nav > a.selected {
-	border-bottom: 3px solid #d64336;
+header > nav > li.selected > a {
+	border: 1px solid #00e697;
+	border-radius: 36px;
+	color: #e71d25;
+}
+
+/* @end */
+
+header > .base {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	padding: 12px;
+	background: rgba(255,255,255,.15);
+}
+header > .base > p {
+	color: rgba(255,255,255,.5);
+	font: 100 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+}
+header > .base > p > img {
+	display: block;
+	width: 175px;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+
+
+
+@media all and (max-width: 720px) {
+
+header {
+	padding: 120px 0 0 0;
+}
+header:before {
+	display: none;
+}
+header > .logo > a > img {
+	max-width: auto;
+	max-height: 120px;
+	margin: 0;
+}
+header > .logo > a > h1 {
+	display: none;
+}
+header > nav {
+	border: none;
+}
+header > nav > a {
+	line-height: 30px;
+}
+
 }
 /* @end */
+
+
+
+
+
+
+
+/* @group Header Open */
+
+header.open {
+	left: 0;
+}
+header.open > .menu-button {
+	
+}
+header.open > .menu-button > span {
+	-webkit-transition: all 1s ease-in-out 0s;
+	        transition: all 1s ease-in-out 0s;	
+}
+header.open > .menu-button > span.one {
+	top: 14px;
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+header.open > .menu-button > span.two {
+	top: 0px;
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+header.open + .content {
+	opacity: .25;
+	filter: alpha(opacity=25);
+}
+header.open > .menu-button > span.three {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+/* @end */
+
 
 
 /* @group CONTENT */
@@ -218,13 +408,7 @@ body > header > div > nav > a.selected {
 	white-space: nowrap;
 }
 .content .banner.half {
-	height: 50%;
-	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
-	background-attachment:scroll;
-	background-size: contain;
-	background-repeat: no-repeat;
-	
-	height: 50%;
+	height: 72%;
 	background-color: #000;
 	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
 	background-attachment:scroll;
@@ -234,58 +418,17 @@ body > header > div > nav > a.selected {
 	box-shadow: 0 75px 75px rgba(0,0,0,.75) inset;
 }
 .content .banner.half > hgroup > h1 {
+	display: inline-block;
 	background: #000;
-	float: left;
+	/*float: left;*/
 	padding: 12px 24px;
 }
+.content .banner.half.shop > hgroup > h1 {
+	padding: auto;
+}
 
 
 
-.content .banner.product{
-	padding: 0;
-	background-size: contain;
-	background-position: left bottom;
-	background-repeat: no-repeat;
-}
-.content .banner.product > hgroup {	
-	width: auto;
-	/*padding: 24px;*/
-	background: rgba(0,0,0,.75);
-	/*border: 1px solid rgba(255,255,255,.25);*/
-	/*text-shadow: 0 2px 1px rgba(0,0,0,.5);*/
-}
-.content .banner.product > hgroup > h1 {
-	padding: 24px 24px 0 24px;
-	font: 48px/48px Georgia, "Times New Roman", Times, serif;
-	
-}
-.content .banner.product > hgroup > h2 {
-	padding: 0px 24px 0 24px;
-	font: 200 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: rgba(255,255,255,.75);
-}
-.content .banner.product > hgroup > h2:before,
-.content .banner.product > hgroup > h2:after {
-	content: '\00a0';
-	display: inline-block;
-	height: 1px;
-	width: 24px;
-	margin: 0 12px;
-	background: rgba(255,255,255,.75);
-	vertical-align: middle;
-}
-.content .banner.product > hgroup > h3 {
-	margin: 48px 0 24px 0;
-	font: 100 60px/72px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #fff;
-}
-.content .banner.product > hgroup > h3:before {
-	content: '$';
-}
-.content .banner.product > hgroup > .button {
-	width: 100%;
-	border-radius: 0;
-}
 
 
 
@@ -464,7 +607,7 @@ hgroup.video {
 
 
 
-/* @group Home */
+/* @group Banner Home */
 
 /*.home > .main-header {
 	position: absolute;
@@ -1028,6 +1171,574 @@ hgroup.video {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @group Product Options */
+.product-options {
+	margin: 0px auto;
+	/*border: 2px solid #000;*/
+	background: #fff;
+	text-align: left;
+	white-space: nowrap;
+}
+.product-options > section {
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 48px 0 0 0;
+}
+.product-options > section > img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+.product-options > section > form {
+	display: inline-block;
+	width: 50%;
+	vertical-align: middle;
+}
+
+
+
+
+
+/* @group H Group */
+.product-options > section > hgroup {
+	display: block;
+	overflow: hidden;
+	vertical-align: middle;
+	white-space: normal;
+	text-align: center;
+}
+.product-options > section > hgroup > h3 {
+	font: 400 24px/24px Georgia, "Times New Roman", Times, serif;
+	color: #000;
+	white-space: normal;
+}
+.product-options > section > hgroup > h4 {
+	padding: 0 24px;
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	white-space: normal;
+}
+/* @end */
+
+
+
+
+
+
+
+
+
+/* @group FORM - Sizes */
+.product-options > section > form.sizes {
+	/*max-width: 480px;*/
+	margin: 24px auto 0 auto;
+	white-space: normal;
+}
+.product-options > section > form.sizes > label {
+	position: relative;
+	display: block;
+	margin: 0 0 24px 0;
+	text-align: left;
+}
+.product-options > section > form.sizes > label > span {
+	display: block;
+	width: 60px;
+	font: 100 14px/18px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+}
+.product-options > section > form.sizes > label > div {
+	display: inline-block;
+	width: 20%;
+	max-width: 150px;
+	min-width: 84px;
+	margin: 3px 3px 3px 0;
+	padding: 3px 12px;
+	border-radius: 3px;
+	border: 2px solid #fff;
+	text-align: center;
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	cursor: pointer;
+	background: #f5f5f5 url('../images/bg.jpg') no-repeat left top;
+}
+.product-options > section > form.sizes > label > div:hover {
+	border-color: #d64336;
+}
+.product-options > section > form.sizes > label > div.selected {
+	background: #d64336;
+	color: #fff;
+}
+/* @end */
+
+
+
+
+
+
+/* @group FORM - Measurements*/
+.product-options > section > form.measurements {
+	display: inline-block;
+	width: 120px;
+	vertical-align: middle;
+}
+.product-options > section > form.measurements > span {
+	font: 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #d64336;
+	cursor: pointer;
+}
+.product-options > section > form.measurements > label {
+	position: relative;
+	display: block;
+	margin: 0 0 18px 0;
+	text-align: left;
+}
+.product-options > section > form.measurements > label > span {
+	display: block;
+	width: 60px;
+	font: 100 14px/18px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+}
+.product-options > section > form.measurements > label > input {
+	width: 100%;
+	padding: 0 48px 0 12px;
+	border: 2px solid #000;
+	border-radius: 3px;
+	outline: none;
+	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	color: #d64336;
+}
+.product-options > section > form.measurements > label > input:focus {
+	border-color: #d64336;
+	outline: none;
+}
+.product-options > section > form.measurements > label > i {
+	position: absolute;
+	bottom: 12px;
+	right: 6px;
+	font-size: 14px;
+}
+.product-options > section > form.measurements > label:after {
+	content: 'Inches';
+	position: absolute;
+	bottom: 14px;
+	right: 6px;
+	font: 200 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+	color: #666;
+	text-transform: capitalize;
+}
+/* @end */
+
+
+
+
+
+
+/* @group Buttons */
+.product-options > .buttons {
+	margin: 48px 0 150px 0;
+	text-align: center;
+}
+.product-options > .buttons > h2 {
+	font: 100 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.product-options > .buttons > h2:before {
+	content: '$';
+}
+.product-options > .buttons > .button {
+	/*display: block;*/
+	/*max-width: 200px;*/
+	margin: 0 auto;
+	padding: 12px 24px;
+}
+
+
+
+
+
+
+
+/*.product-options > section > .buttons > h3 {
+	font: 900 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*letter-spacing: 2px;*!/
+}
+.product-options > section > .buttons > h3:before {
+	content: '$';
+}
+.product-options > section > .buttons > h3:after {
+	content: '/Shirt';
+	position: relative;
+	margin: 0 0 0 6px;
+	/*top: -6px;*!/
+	font-size: 36px;
+	font-weight: 100;
+	/*vertical-align: middle;*!/
+	/*text-decoration: underline;*!/
+}
+
+.product-options > section > .buttons > label {
+	display: inline-block!important;
+	position: relative;
+	display: block;
+	margin: 12px 0;
+}
+.product-options > section > .buttons > label > span {
+	position: absolute;
+	left: 12px;
+	top: 8px;
+	font: 14px/24px Georgia, "Times New Roman", Times, serif;
+}
+.product-options > section > .buttons > label > input {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 0 24px 0 48px;
+	border: 2px solid #000;
+	border-radius: 3px;
+	outline: none;
+	font: 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+}*/
+
+/* @end */
+
+
+
+/* @group ILLUSTRATION */
+/*.product-options > section > .illustration {
+	display: inline-block;
+	width: 320px;
+	padding: 60px 0;
+	vertical-align: middle;
+}
+
+
+.product-options > section > .illustration > div {
+	position: relative;
+	width: 100%;
+}
+.product-options > section > .illustration > div > img {
+	width: 100%;
+}
+.product-options > section > .illustration > div > img.size {
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: all .3s ease-out 0s;
+	width: 100%;
+	left: 0;
+	top: -6px;
+}
+.product-options > section > .illustration > div > img.size.visible {
+	opacity: 1;
+	top: 0px;
+	-webkit-transition: all .75s ease-in 0s;
+}
+.product-options > section > .illustration > div > p {
+	position: absolute;
+	top: 100%;
+	left: -6px;
+	width: 100%;
+	margin: 0px 0 0 0;
+	padding: 0 24px;
+	white-space: normal;
+	opacity: 0;
+	-webkit-transition: all .3s ease-in 0s;
+	font: 400 12px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+	letter-spacing: 1px;
+}
+.product-options > section > .illustration > div > img.visible+p {
+	opacity: 1;
+	left: 0;
+	-webkit-transition: all .5s ease-out 0s;
+}*/
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+/* @group Products */
+.products {
+	padding: 96px 0;
+	background: #fff;
+}
+.products > ul {
+	max-width: 960px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+	overflow: hidden;
+}
+.products > ul > li {
+	float: left;
+	width: 49%;
+	margin: 0 0 2% 0;
+	color: #fff;
+	background: #000;
+}
+.products > ul > li:nth-last-of-type(odd) {
+	margin-left: 2%;
+}
+.products > ul > li > a {
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.products > ul > li > a > img {
+	float: none;
+	display: inline-block;
+	width: 50%;
+	vertical-align: middle;
+}
+.products > ul > li > a > hgroup {
+	float: none;
+	display: inline-block;
+	width: 50%;
+	vertical-align: middle;
+	text-align: left;
+}
+.products > ul > li > a > hgroup > h1 {
+	font: 900 18px/24px Georgia, "Times New Roman", Times, serif;
+	color: #fff;
+	text-transform: uppercase;
+	white-space: normal;
+}
+.products > ul > li > a > hgroup > h2 {
+	font: 200 16px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.5);
+}
+.products > ul > li > a > hgroup > h2:before {
+	content: "$";
+}
+
+
+
+@media all and (max-width: 1080px) {
+	.products {
+		padding: 2%;
+	}
+}
+
+@media all and (max-width: 720px) {
+	.products {
+	padding: 24px;
+	}
+	.products > ul > li:nth-last-of-type(odd) {
+		margin-left: 0;
+	}
+	.products > ul > li {
+		width: 100%;
+		margin: 0 0 24px;
+	}
+	.products > ul > li:last-of-type {
+		margin: 0;
+	}
+}
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @group Product Banner */
+.productbanner{
+	padding: 0;
+	background-size: contain;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background: #000;
+}
+.productbanner:before {
+	content: '\00a0';
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	top: 100%;
+	margin: -50px 0 0 -50%;
+	width: 200%;
+	height: 200px;
+	background: #fff;
+	transform: rotate(-2deg);
+}
+.productbanner > img {
+	position: absolute;
+	top: 0;
+	right: 50%;
+	height: 100%;
+}
+.productbanner > hgroup {	
+	width: 100%;
+	max-width: none;
+	padding: 0 0 0 50%;
+	text-align: left;
+}
+.productbanner > hgroup > h1 {
+	max-width: 360px;
+	margin: 0;
+	font: 22px/36px Georgia, "Times New Roman", Times, serif;
+	text-align: left;
+}
+.productbanner > hgroup > h2 {
+	margin: 0px 0 24px 0;
+	font: 100 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+}
+.productbanner > hgroup > h2:before {
+	content: '$';
+}
+.productbanner > hgroup > .button {
+	border-radius: 0;
+}
+
+
+
+@media all and (max-width: 720px) {
+.productbanner {
+	height: auto!important;
+	padding: 0;
+}
+.productbanner:before,
+.productbanner:after {
+	display: none;
+}
+.productbanner > img {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: none!important;
+	height: auto;
+	left: 0;
+	top: 0;
+	opacity: 1!important;
+}
+.productbanner > hgroup {
+	padding: 24px!important;
+	background: #fff;
+	text-align: center;
+}
+.productbanner > hgroup:before {
+	content: '\00a0';
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	top: 0%;
+	margin: -25px 0 0 -50%;
+	width: 200%;
+	height: 50px;
+	background: #fff;
+	transform: rotate(-2deg);
+}
+.productbanner > hgroup > h1 {
+	position: relative;
+	max-width: none;
+	z-index: 100000;
+	color: #000;
+	text-shadow: none;
+	text-align: inherit;
+}
+.productbanner > hgroup > h2 {
+	position: relative;
+	z-index: 100000;
+	margin: 0;
+	color: #000!important;
+	text-shadow: none;
+	font: 100 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif!important;
+}
+.productbanner > hgroup > .button {
+	display: none;
+}
+}
+/* @end */
+
+/* @group Shop Banner */
+
+
+
+/* @end */
+
+/* @group Hand Tailored */
+.banner h1.hand-tailored {
+	display: inline-block;
+	padding: 18px 36px;
+	border: 2px solid rgba(255,255,255,1);
+	box-shadow: 0 0 0 5px rgba(0,0,0,.75);
+	background: rgba(0,0,0,.75)!important;
+	font-size: 24px;
+}
+.hand-tailored > .one {
+	font-size: 150%;
+	letter-spacing: 5px;
+}
+.hand-tailored > .two {
+	position: relative;
+	display: block;
+	font-size: 50%;
+	line-height: 200%;
+	font-weight: 100;
+	letter-spacing: 3px;
+}
+.hand-tailored > .two:before,
+.hand-tailored > .two:after {
+	content: '\00a0';
+	display: inline-block;
+	height: 2px;
+	width: 36px;
+	margin: -5px 12px 0 12px;
+	vertical-align: middle;
+	background: #fff;
+}
+.hand-tailored > .three {
+	
+}
+.hand-tailored > .three > span {
+	font-size: 50%;
+}
+
+@media all and (max-width: 720px) {
+	.banner h1.hand-tailored {
+		font-size: 16px;
+	}
+}
+/* @end */
+
+
+
+
+
+
+
+
 /* @group Product Details */
 .product-details {
 	display: inline-block;
@@ -1071,6 +1782,8 @@ hgroup.video {
 	color: #fff;
 	text-shadow: 0 1px 2px  rgba(0,0,0,1);
 }
+
+
 
 /* Hgroup */
 .product-details > section > hgroup {
@@ -1198,6 +1911,8 @@ hgroup.video {
 }
 
 
+
+
 /* Buy */
 .product-details > section > .buy {
 	margin: 36px 0 0 0;
@@ -1251,8 +1966,8 @@ hgroup.video {
 	position: relative;
 	max-width: none;
 	height: auto;
-	padding: 0;
-	background: #fff;
+	padding: 24px;
+	background: #f16;
 	text-shadow: none;
 }
 .product-details:before {
@@ -1270,6 +1985,7 @@ hgroup.video {
 	z-index: 1000;
 	width: 100%;
 	max-width: none;
+	
 	background: none;
 	color: #000;
 	text-shadow: none;
@@ -1292,6 +2008,82 @@ hgroup.video {
 }
 /* @end */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @group Photo Gallery */
+.photo-gallery {
+	position: relative;
+	z-index: 10000;
+	margin: 24px 0 0 0;
+}
+.photo-gallery > ul {
+	max-width: 720px;
+	margin: 0 auto;
+	list-style: none;
+	overflow: hidden;
+	text-align: center;
+}
+.photo-gallery > ul > li {
+	position: relative;
+	display: inline-block;
+	width: 172px;
+	height: 172px;
+	margin: 0 8px 8px 0px;
+}
+.photo-gallery > ul > li:first-of-type {
+	
+}
+.photo-gallery > ul > li > a {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	/*opacity: .75;*/
+	-webkit-transition: all .5s ease-out 0s;
+}
+
+
+.photo-gallery > ul > li > a:hover {
+	opacity: 1;
+	-webkit-transition: all 1s ease-in 0s;
+	background-position: bottom right;
+}
+/*.photo-gallery > ul > li > a:hover > .arrow {
+	left: 100%;
+	-webkit-transition: all .5s ease-in-out 0s;
+}*/
+
+
+@media all and (max-width: 720px) {
+.photo-gallery > ul {
+	padding: 24px;
+}
+.photo-gallery > ul > li {
+	width: 120px;
+	height: 120px;
+	/*margin: 0 0 0px 0!important;*/
+}
+
+}
+
+/* @end */
 
 
 
@@ -1811,27 +2603,6 @@ article {
 
 
 @media all and (max-width: 540px) {
-/*body > header {
-	
-}
-body > header > div > a {
-	/*position: relative;*!/
-	display: block;
-}
-body > header > div > a > span {
-	display: none;
-}
-body > header > div > nav {
-	display: block;
-}
-
-
-.home > .main-header {
-	position: absolute;
-	bottom: auto;
-	top: 0;
-}*/
-
 
 
 .banner {

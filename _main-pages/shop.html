@@ -1,0 +1,40 @@
+---
+layout: default
+title: Hand Tailored Dress Shirts
+permalink: /shop/
+navtitle: shop
+---
+<div class="banner half shop" style="background: #000 url('/images/banners/scissors.jpg'); background-position: center;">
+	<hgroup>
+		<h1 class="hand-tailored">
+			<span class="one">Hand Tailored</span>
+			<span class="two">In The</span>
+			<span class="three">United States <span>of</span> America</span>
+		</h1>
+	</hgroup>
+</div>
+
+<div class="products">
+	<ul>
+		{% for product in site.products %}
+			{% for item in product.gallery %}
+				{% capture imagecount %}{{ forloop.length }}{% endcapture %}
+				{% if forloop.last %}
+					{% capture primaryimage %}{{ item.image_path }}{% endcapture %}
+				{% endif %}
+			{% endfor %}
+			<li>
+				<a href="{{ product.url }}">
+					<img src="{{ primaryimage }}" alt="Hand Tailored Dress Shirt" />
+					<hgroup>
+						<!--<h2>{{ product.brand }}</h2>
+						<h1>{{ product.name }}</h1>
+						<h3>{{ product.price }}</h3>-->
+						<h1>{{ product.brand }} {{ product.color }} {{ product.collar }}</h1>
+						<h2>{{ product.price }}</h2>
+					</hgroup>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

@@ -3,57 +3,56 @@ layout: default
 navclass: shop
 navtitle: Shop
 ---
-<div class="banner product" style="background-image: url('{{ page.banner_path }}');">
+{% for item in page.gallery %}
+	{% if forloop.last %}
+		{% capture primaryimage %}{{ item.image_path }}{% endcapture %}
+	{% endif %}
+{% endfor %}
+
+<div class="banner productbanner">
+	<img src="{{ primaryimage }}" alt="Hand Tailored {{ page.brand }} {{ page.color }} {{ page.collar }} Dress Shirt" />
 	<hgroup>
-		<h1 data-ava="{{ page.ava }}">{{ page.name }}</h1>
-		<h2>{{ page.brand }}</h2>
-		<h3>{{ page.price }}</h3>
-		<a href="#" class="button">Customize Your Order</a>
+		<h1 data-ava="{{ page.ava }}">{{ page.brand }} {{ page.color }} {{ page.collar }} Dress Shirt</h1>
+		<h2>{{ page.price }}</h2>
+		<a href="#" class="button">Customize This Shirt</a>
 	</hgroup>
 </div>
+
+{% include gallery.html %}
 
 <div class="product-options">
 	<section>
 		<hgroup>
-			<h3>Select your standard shirt size.</h3>
-			<h4>We'll ask for your measurements next.</h4>
+			<h3>1. Select your standard shirt size</h3>
+			<h4>We'll ask for your measurements next</h4>
 		</hgroup>
+		
+		<img src="/images/illustrations/shirtmeasurements.png" alt="" />
 		
 		<form class="sizes">
 			<label>
 				<span>Sleeves</span>
 				{% for item in site.data.sleeves %}
-				<div id="{{ item.start }}-{{item.end}}" class="sleeve-size {% if forloop.first %}selected{% endif %}" data-size="{{ item.start}}/{{item.end}}" >{{ item.start}}/{{item.end}}</div>
+				<div id="{{ item.start }}-{{item.end}}" class="sleeve-size" data-size="{{ item.start}}/{{item.end}}" >{{ item.start}}/{{item.end}}</div>
 				{% endfor %}
 			</label>
 			<label>
 				<span>Collar</span>
 				{% for item in site.data.collar %}
-				<div id="{{ item.start }}-{{ item.end }}" class="collar-size {% if forloop.first %}selected{% endif %}" data-size="{{ item.start}}/{{item.end}}">{{ item.start}}/{{ item.end }}</div>
+				<div id="{{ item.start }}-{{ item.end }}" class="collar-size" data-size="{{ item.start}}/{{item.end}}">{{ item.start}}/{{ item.end }}</div>
 				{% endfor %}
 			</label>
 		</form>
+		
 	</section>
 	
 	<section>
 		<hgroup>
-			<h3>Enter Your Measurements?</h3>
-			<h4>Give us your true Measurements... we'll add the proper amount of breathing room.</h4>
+			<h3>2. Enter Your True Measurements</h3>
+			<h4>We'll add the proper breathing room</h4>
 		</hgroup>
 		
-		<div class="illustration">
-			<div>
-				<img src="/images/illustrations/measurements/bicep.png" alt="bicep size"  id="bicep-size" class="size"/>
-				<p>Give us your fully flexed measurement on this one.</p>
-				<img src="/images/illustrations/measurements/hips.png" alt="hips size" id="hips-size" class="size"/>
-				<p>Measure a little bit below your belt, think the widest part of your butt.</p>
-				<img src="/images/illustrations/measurements/waist.png" alt="waist size" id="waist-size" class="size"/>
-				<p>This will typically be your smallest measurement, just beneath your rib cage. Now is not the time to suck it in.</p>
-				<img src="/images/illustrations/measurements/chest.png" alt="chest size" id="chest-size" class="size"/>
-				<p>Measure just below your arm pits, keep the tape straight all the way around your back and stop flexing.</p>
-				<img src="/images/illustrations/measurements/shirt.png" alt="shirt size" />
-			</div>
-		</div>
+		<img src="/images/illustrations/bodymeasurements.png" alt="" />
 		
 		<form class="measurements">
 			<label>
@@ -73,31 +72,45 @@ navtitle: Shop
 				<input type="text" name="bicep" id="bicep" value="" />
 			</label>
 		</form>
-	
-		<div class="buttons">
-			<a href="#"
-			    class="snipcart-add-item button red"
-			    data-item-id="1"
-			    data-item-name="{{ page.name }}"
-			    data-item-price="{{ page.price }}"
-			    data-item-weight="1"
-			    data-item-url="http://customcutshirts.com"
-			    data-item-description="Kinda like a warm hug"
-			    data-item-custom1-name="Sleeves"
-			    data-item-custom1-required="true"
-			    data-item-custom2-name="Collar"
-			    data-item-custom2-required="true"
-			    data-item-custom3-name="Chest"
-			    data-item-custom3-required="true"
-			    data-item-custom4-name="Waist"
-			    data-item-custom4-required="true"
-			    data-item-custom5-name="Hips"
-			    data-item-custom5-required="true"
-			    data-item-custom6-name="Biceps"
-			    data-item-custom6-required="true"
-			>Add To Cart</a>
-		</div>
+		
+		<!--<div class="illustration">
+			<div>
+				<img src="/images/illustrations/measurements/bicep.png" alt="bicep size"  id="bicep-size" class="size"/>
+				<p>Give us your fully flexed measurement on this one.</p>
+				<img src="/images/illustrations/measurements/hips.png" alt="hips size" id="hips-size" class="size"/>
+				<p>Measure a little bit below your belt, think the widest part of your butt.</p>
+				<img src="/images/illustrations/measurements/waist.png" alt="waist size" id="waist-size" class="size"/>
+				<p>This will typically be your smallest measurement, just beneath your rib cage. Now is not the time to suck it in.</p>
+				<img src="/images/illustrations/measurements/chest.png" alt="chest size" id="chest-size" class="size"/>
+				<p>Measure just below your arm pits, keep the tape straight all the way around your back and stop flexing.</p>
+				<img src="/images/illustrations/measurements/shirt.png" alt="shirt size" />
+			</div>
+		</div>-->
 	</section>
+	<div class="buttons">
+		<h2>{{ page.price }}</h2>
+		<a href="#"
+		    class="snipcart-add-item button red"
+		    data-item-id="1"
+		    data-item-name="{{ page.name }}"
+		    data-item-price="{{ page.price }}"
+		    data-item-weight="1"
+		    data-item-url="http://customcutshirts.com"
+		    data-item-description="Hand tailored in the U.S.A"
+		    data-item-custom1-name="Sleeves"
+		    data-item-custom1-required="true"
+		    data-item-custom2-name="Collar"
+		    data-item-custom2-required="true"
+		    data-item-custom3-name="Chest"
+		    data-item-custom3-required="true"
+		    data-item-custom4-name="Waist"
+		    data-item-custom4-required="true"
+		    data-item-custom5-name="Hips"
+		    data-item-custom5-required="true"
+		    data-item-custom6-name="Biceps"
+		    data-item-custom6-required="true"
+		>Add To Cart</a>
+	</div>
 </div>
 
 
@@ -105,10 +118,6 @@ navtitle: Shop
   data-api-key="MWZmY2VlY2YtZTRlMS00OWI2LWJjYjItNjcwNTNiNGNhY2Q0NjM1ODc5MTI5MTU0MjM0MzE1"></script>
 
 <link type="text/css" href="https://cdn.snipcart.com/themes/base/snipcart.min.css" rel="stylesheet" />
-
-<article>
-	{{ content }}
-</article>
 
 
 <script type="text/javascript">
