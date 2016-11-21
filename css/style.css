@@ -1480,7 +1480,7 @@ hgroup.video {
 /* @group Products */
 .products {
 	padding: 96px 0;
-	background: #fff;
+	background: #0;
 }
 .products > ul {
 	max-width: 960px;
@@ -1495,6 +1495,9 @@ hgroup.video {
 	margin: 0 0 2% 0;
 	color: #fff;
 	background: #000;
+	
+	background: #000;
+	border: 1px solid #000;
 }
 .products > ul > li:nth-last-of-type(odd) {
 	margin-left: 2%;
@@ -1510,25 +1513,36 @@ hgroup.video {
 	display: inline-block;
 	width: 50%;
 	vertical-align: middle;
+	margin: 0 -.25em 0 0!important;
 }
 .products > ul > li > a > hgroup {
 	float: none;
-	display: inline-block;
-	width: 50%;
+	display: block;
+	width: 100%;
+	padding: 0 24px 0 0;
 	vertical-align: middle;
 	text-align: left;
+	
+	/*display: block;*/
+	background: #fff;
+	padding: 24px;
 }
 .products > ul > li > a > hgroup > h1 {
 	font: 900 18px/24px Georgia, "Times New Roman", Times, serif;
 	color: #fff;
 	text-transform: uppercase;
 	white-space: normal;
+	
+	color: #000;
 }
 .products > ul > li > a > hgroup > h2 {
 	font: 200 16px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: rgba(255,255,255,.5);
+	
+	color: rgba(0,0,0,0.75);
+	font: 200 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 .products > ul > li > a > hgroup > h2:before {
 	content: "$";
