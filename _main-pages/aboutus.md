@@ -2,8 +2,10 @@
 layout: article
 title: About Us
 description: We like shirts that fit
-permalink: /about-us/
 navtitle: about
+navorder: 4
+navclass: /about-us/
+permalink: /about-us/
 bannerBackground:
 ---
 

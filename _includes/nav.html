@@ -1,6 +1,8 @@
 <nav>
-	<a href="/">Home</a>
-	{% for item in site.main-pages %}
-	<a href="{{ item.url }}" {% if page.url contains item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
+	<!--<a href="/" {% if page.navlcass == home %}class="selected"{% endif %}>Shop</a>-->
+	
+	{% assign navitems = site.main-pages | sort: 'navorder'  %}
+	{% for item in navitems %}
+	<a href="{{ item.url }}" {% if page.url == item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
 	{% endfor %}
 </nav>
