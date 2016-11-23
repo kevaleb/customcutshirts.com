@@ -1267,6 +1267,8 @@ section.measure {
 
 /* @group Thank You */
 .content section.thank-you {
+	position: relative;
+	z-index: 1000000;
 	max-width: 960px;
 	padding: 96px 0 0 0;
 	align-content: #000;
@@ -2900,6 +2902,7 @@ footer > div > nav > a {
 	padding: 0 12px;
 	font: 100  "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 footer > div > nav > a:hover {
 	color: #d64336;
