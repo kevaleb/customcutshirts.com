@@ -1897,7 +1897,7 @@ section.measure {
 
 .products.basic > ul {
 	overflow: visible;
-	margin: 0 0 96px 0;
+	margin: 0 auto 96px auto;
 }
 .products.basic > ul:after {
 	content: '\00a0';
@@ -1922,10 +1922,19 @@ section.measure {
 	padding: 0 12px;
 }
 .products.basic > ul > li > a > hgroup > h1 {
-	
+	font-size: 16px;
 }
 .products.basic > ul > li > a > hgroup > h2 {
-	
+	font-size: 14px;
+}
+.products.basic > ul > li > a > hgroup > h2:before {
+	display: none;
+}
+.products.basic > ul > li > a > hgroup > h3 {
+	font: 700 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.products.basic > ul > li > a > hgroup > h3:before {
+	content: '$';
 }
 
 
@@ -1998,6 +2007,12 @@ section.measure {
 .productbanner > hgroup > h2:before {
 	content: '$';
 }
+.productbanner > hgroup > h3 {
+	margin: 0 0 24px 0;
+	font: 200 16px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: rgba(255,255,255,.75);
+	text-transform: uppercase;
+}
 .productbanner > hgroup > .button {
 	border-radius: 0;
 }
@@ -2056,6 +2071,14 @@ section.measure {
 	color: #000!important;
 	text-shadow: none;
 	font: 100 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif!important;
+}
+.productbanner > hgroup > h3 {
+	display: block;
+	position: relative;
+	z-index: 100000;
+	margin: 0 0 24px 0;
+	color: #666!important;
+	text-shadow: none;
 }
 .productbanner > hgroup > .button {
 	display: none;
