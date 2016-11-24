@@ -3052,7 +3052,7 @@ footer > div > nav > a.snipcart-checkout > .snipcart-summary {
 	color: #666;
 }
 #snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textbox {
-	/*display: none!important;*/
+	display: none!important;
 }
 
 /* @end */
