@@ -209,10 +209,17 @@ permalink: /tailor/
 	
 	
 	jQuery(document).ready(function() {
-//		$('input#chest').val(persistentQueryString['ccs-chest-measurement']);
-//		$('input#waist').val(persistentQueryString['ccs-waist-measurement']);
-//		$('input#hips').val(persistentQueryString['ccs-hips-measurement']);
-//		$('input#bicep').val(persistentQueryString['ccs-bicep-measurement']);
+		$('input#chest').val(persistentQueryString['ccs-chest-measurement']);
+		$('input#waist').val(persistentQueryString['ccs-waist-measurement']);
+		$('input#hips').val(persistentQueryString['ccs-hips-measurement']);
+		$('input#bicep').val(persistentQueryString['ccs-bicep-measurement']);
+		
+		
+		$('#snipcart').data('cart-custom2-value',persistentQueryString['utm-campaign']);
+		$('#snipcart').data('cart-custom3-value',persistentQueryString['utm-source']);
+		$('#snipcart').data('cart-custom4-value',persistentQueryString['utm-medium']);
+		$('#snipcart').data('cart-custom5-value',persistentQueryString['utm-content']);
+		$('#snipcart').data('cart-custom6-value',persistentQueryString['utm-term']);
 	});
 	
 	
@@ -249,7 +256,7 @@ permalink: /tailor/
 	$( "input#chest").change(function() {
 	  var chest = $('input#chest').val();
 	  $('.snipcart-add-item').data('item-custom1-value',chest);
-//	  localStorage["ccs-chest-measurement"] = jQuery("input#chest").val();
+	  localStorage["ccs-chest-measurement"] = jQuery("input#chest").val();
 	});
 	
 	$( "input#chest" ).focus(function() {
@@ -263,7 +270,7 @@ permalink: /tailor/
 	$( "input#waist").change(function() {
 	  var waist = $('input#waist').val();
 	  $('.snipcart-add-item').data('item-custom2-value',waist);
-//	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
+	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
 	});
 	
 	$( "input#waist" ).focus(function() {
@@ -275,7 +282,7 @@ permalink: /tailor/
 	$( "input#hips").change(function() {
 	  var hips = $('input#hips').val();
 	  $('.snipcart-add-item').data('item-custom3-value',hips);
-//	  localStorage["ccs-hips-measurement"] = jQuery("input#hips").val();
+	  localStorage["ccs-hips-measurement"] = jQuery("input#hips").val();
 	});
 	
 	$( "input#hips" ).focus(function() {
@@ -287,7 +294,7 @@ permalink: /tailor/
 	$( "input#bicep").change(function() {
 	  var bicep = $('input#bicep').val();
 	  $('.snipcart-add-item').data('item-custom4-value',bicep);
-//	  localStorage["ccs-bicep-measurement"] = jQuery("input#bicep").val();
+	  localStorage["ccs-bicep-measurement"] = jQuery("input#bicep").val();
 	});
 	
 	$( "input#bicep" ).focus(function() {

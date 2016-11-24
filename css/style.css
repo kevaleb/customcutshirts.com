@@ -255,9 +255,27 @@ header > nav > a.selected:after  {
 	top: 20px;
 	width: 100%;
 	height: 3px;
-	background: #fff;
+	background: #d64336;
 }
 
+
+header > nav > a.snipcart-checkout {
+	display: inline-block;
+	position: relative;
+	width: 48px;
+	margin: 0;
+	text-align: right;
+	white-space: nowrap;
+}
+header > nav > a.snipcart-checkout > i {
+	
+}
+header > nav > a.snipcart-checkout > .snipcart-summary {
+	display: inline-block;
+}
+header > nav > a.snipcart-checkout > .snipcart-summary.snipcart-summary-empty {
+	
+}
 
 
 
@@ -276,7 +294,7 @@ header > .logo {
 
 
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 720px) {
 header {
 	position: fixed;
 	z-index: 100000000;
@@ -384,6 +402,23 @@ header > nav > a.selected:after {
 	
 }
 
+
+
+header > nav > a.snipcart-checkout {
+	position: fixed;
+	top: 12px;
+	right: 12px;
+	width: auto;
+	font-size: 48px;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5), 0 1px 1px rgba(0,0,0,.5);
+}
+header > nav > a.snipcart-checkout .snipcart-total-items {
+	display: none;
+	font-size: 18px;
+	vertical-align: middle;
+}
+
 }
 
 
@@ -439,7 +474,7 @@ header.open > .menu-button > span.three {
 	min-height: 100%;
 	/*max-width: 720px;*/
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 0 96px 0;
 	overflow: hidden;
 }
 .content section {
@@ -1750,6 +1785,14 @@ section.measure {
 	padding: 0px 0;
 	background: #0;
 }
+.products > h2{
+	margin: 48px 0 0 0;
+	text-align: center;
+	font: 100 24px/48px Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	color: #000;
+	
+}
 .products > ul {
 	max-width: 960px;
 	margin: 0 auto;
@@ -1799,8 +1842,9 @@ section.measure {
 	font: 900 18px/24px Georgia, "Times New Roman", Times, serif;
 	color: #fff;
 	text-transform: uppercase;
-	white-space: normal;
-	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	color: #000;
 }
 .products > ul > li > a > hgroup > h2 {
@@ -1811,6 +1855,9 @@ section.measure {
 	
 	color: rgba(0,0,0,0.75);
 	font: 200 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	
+	
+	
 }
 .products > ul > li > a > hgroup > h2:before {
 	content: "$";
@@ -1846,7 +1893,59 @@ section.measure {
 
 
 
+/* @group Products - Basic */
 
+.products.basic > ul {
+	overflow: visible;
+	margin: 0 0 96px 0;
+}
+.products.basic > ul:after {
+	content: '\00a0';
+	display: block;
+	clear: both;
+}
+.products.basic > ul > li {
+	width: 33.333%;
+	margin: 0;
+	padding: 24px;
+	border: none;
+	background: none;
+}
+.products.basic > ul > li:hover {
+	box-shadow: 0 0 0 5px #ccc;
+}
+.products.basic > ul > li > a {
+	
+}
+.products.basic > ul > li > a > hgroup {
+	text-align: center;
+	padding: 0 12px;
+}
+.products.basic > ul > li > a > hgroup > h1 {
+	
+}
+.products.basic > ul > li > a > hgroup > h2 {
+	
+}
+
+
+@media all and (max-width: 720px) {
+	.products.basic > ul > li {
+		width: 50%;
+		padding: 0;
+	}
+	.products.basic > ul > li > a > img {
+		width: 72%;
+	}
+	.products.basic > ul > li > a > hgroup > h1 {
+		font-size: 14px;
+	}
+	.products.basic > ul > li > a > hgroup > h2 {
+		
+	}
+	
+}
+/* @end */
 
 
 
@@ -1950,9 +2049,10 @@ section.measure {
 	text-align: inherit;
 }
 .productbanner > hgroup > h2 {
+	display: block;
 	position: relative;
 	z-index: 100000;
-	margin: 0;
+	margin: 0 0 48px 0;
 	color: #000!important;
 	text-shadow: none;
 	font: 100 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif!important;
@@ -2316,14 +2416,13 @@ section.measure {
 	max-width: 720px;
 	margin: 0 auto;
 	list-style: none;
-	overflow: hidden;
 	text-align: center;
 }
 .photo-gallery > ul > li {
 	position: relative;
 	display: inline-block;
-	width: 172px;
-	height: 172px;
+	width: 150px;
+	height: 135px;
 	margin: 0 8px 8px 0px;
 }
 .photo-gallery > ul > li:first-of-type {
@@ -2342,10 +2441,8 @@ section.measure {
 }
 
 
-.photo-gallery > ul > li > a:hover {
-	opacity: 1;
-	-webkit-transition: all 1s ease-in 0s;
-	background-position: bottom right;
+.photo-gallery > ul > li:hover {
+	box-shadow: 0 0 0 3px #d64336;
 }
 /*.photo-gallery > ul > li > a:hover > .arrow {
 	left: 100%;
@@ -2358,9 +2455,14 @@ section.measure {
 	padding: 24px;
 }
 .photo-gallery > ul > li {
-	width: 120px;
-	height: 120px;
+	width: 150px;
+	height: 135px;
 	/*margin: 0 0 0px 0!important;*/
+}
+
+
+.strp-window {
+	z-index: 10000000000000000000000000000000!important;
 }
 
 }
@@ -2907,6 +3009,21 @@ footer > div > nav > a {
 footer > div > nav > a:hover {
 	color: #d64336;
 }
+
+footer > div > nav > a.snipcart-checkout {
+	display: inline-block;
+	position: relative;
+	width: 48px;
+	margin: 0;
+	text-align: right;
+	white-space: nowrap;
+}
+footer > div > nav > a.snipcart-checkout > i {
+	
+}
+footer > div > nav > a.snipcart-checkout > .snipcart-summary {
+	display: inline-block;
+}
 /* @end */
 
 
@@ -2920,6 +3037,24 @@ footer > div > nav > a:hover {
 
 	z-index: 10000000000000000000!important;
 }
+
+
+/* Order Info */
+#snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textarea span {
+	display: block;
+}
+#snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textarea textarea {
+	display: block;
+	width: 100%;
+	min-height: 150px;
+	padding: 12px;
+	font: 400 15px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+}
+#snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textbox {
+	/*display: none!important;*/
+}
+
 /* @end */
 
 

@@ -5,4 +5,12 @@
 	{% for item in navitems %}
 	<a href="{{ item.url }}" {% if page.url == item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
 	{% endfor %}
+	
+	<a href="#" class="snipcart-checkout">
+	
+		<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+		<div class="snipcart-summary">
+			<span class="snipcart-total-items"></span>
+		</div>
+	</a>
 </nav>

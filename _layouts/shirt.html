@@ -1,0 +1,229 @@
+---
+layout: default
+navclass: shop
+navtitle: Shop
+---
+{% for item in page.gallery %}
+	{% if forloop.last %}
+		{% capture primaryimage %}{{ item.image_path }}{% endcapture %}
+	{% endif %}
+{% endfor %}
+
+<div class="banner productbanner">
+	<img src="{{ primaryimage }}" alt="Hand Tailored {{ page.brand }} {{ page.color }} {{ page.collar }} Dress Shirt" />
+	<hgroup>
+		<h1 data-ava="{{ page.ava }}">{{ page.brand }} {{ page.color }} {{ page.collar }} Dress Shirt</h1>
+		<h2>{{ page.price }}</h2>
+		<a href="#product-options" class="button">Customize This Shirt</a>
+	</hgroup>
+</div>
+
+{% include gallery.html %}
+
+<div class="product-options" id="product-options">
+	<section>
+		<hgroup>
+			<h3>1. Select your standard shirt size</h3>
+			<h4>We'll ask for your measurements next</h4>
+		</hgroup>
+		
+		<img src="/images/illustrations/shirtmeasurements.png" alt="" />
+		
+		<form class="sizes">
+			<label>
+				<span>Sleeves</span>
+				{% for item in site.data.sleeves %}
+				<div id="{{ item.start }}-{{item.end}}" class="sleeve-size" data-size="{{ item.start}}/{{item.end}}" >{{ item.start}}/{{item.end}}</div>
+				{% endfor %}
+			</label>
+			<label>
+				<span>Collar</span>
+				{% for item in site.data.collar %}
+				<div id="{{ item.start }}-{{ item.end }}" class="collar-size" data-size="{{ item.start}}/{{item.end}}">{{ item.start}}/{{ item.end }}</div>
+				{% endfor %}
+			</label>
+		</form>
+		
+	</section>
+	
+	<section>
+		<hgroup>
+			<h3>2. Enter Your True Measurements</h3>
+			<h4>We'll add the proper breathing room</h4>
+		</hgroup>
+		
+		<img src="/images/illustrations/bodymeasurements.png" alt="" />
+		
+		<form class="measurements">
+			<label>
+				<span>Chest</span>
+				<input type="text" name="chest" id="chest" value="" />
+			</label>
+			<label>
+				<span>Waist</span>
+				<input type="text" name="waist" id="waist" value="" />
+			</label>
+			<label>
+				<span>Hips</span>
+				<input type="text" name="hips" id="hips" value="" />
+			</label>
+			<label>
+				<span>Bicep</span>
+				<input type="text" name="bicep" id="bicep" value="" />
+			</label>
+		</form>
+		
+		<!--<div class="illustration">
+			<div>
+				<img src="/images/illustrations/measurements/bicep.png" alt="bicep size"  id="bicep-size" class="size"/>
+				<p>Give us your fully flexed measurement on this one.</p>
+				<img src="/images/illustrations/measurements/hips.png" alt="hips size" id="hips-size" class="size"/>
+				<p>Measure a little bit below your belt, think the widest part of your butt.</p>
+				<img src="/images/illustrations/measurements/waist.png" alt="waist size" id="waist-size" class="size"/>
+				<p>This will typically be your smallest measurement, just beneath your rib cage. Now is not the time to suck it in.</p>
+				<img src="/images/illustrations/measurements/chest.png" alt="chest size" id="chest-size" class="size"/>
+				<p>Measure just below your arm pits, keep the tape straight all the way around your back and stop flexing.</p>
+				<img src="/images/illustrations/measurements/shirt.png" alt="shirt size" />
+			</div>
+		</div>-->
+	</section>
+	<div class="buttons">
+		<h2>{{ page.price }}</h2>
+		<a href="#"
+		    class="snipcart-add-item button red"
+		    data-item-id="{{ page.sku }}"
+		    data-item-name="{{ page.brand }} {{ page.color }} {{ page.collar }} dress shirt"
+		    data-item-price="{{ page.price }}"
+		    data-item-weight="1"
+		    data-item-url="{{ page.url }}"
+		    data-item-description="Hand tailored in the U.S.A"
+		    data-item-custom1-name="Sleeves"
+		    data-item-custom1-options="	{% for item in site.data.sleeves %}{% if forloop.last == true %}{{ item.start}}/{{item.end}}{% else %}{{ item.start}}/{{item.end}}|{% endif %}{% endfor %}"
+		    data-item-custom1-required="true"
+		    data-item-custom2-name="Collar"
+		    data-item-custom2-options="	{% for item in site.data.collar %}{% if forloop.last == true %}{{ item.start}}/{{item.end}}{% else %}{{ item.start}}/{{item.end}}|{% endif %}{% endfor %}"
+		    data-item-custom2-required="true"
+		    data-item-custom3-name="Chest"
+		    data-item-custom3-required="true"
+		    data-item-custom4-name="Waist"
+		    data-item-custom4-required="true"
+		    data-item-custom5-name="Hips"
+		    data-item-custom5-required="true"
+		    data-item-custom6-name="Biceps"
+		    data-item-custom6-required="true"
+		>Add To Cart</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		$('input#chest').val(persistentQueryString['ccs-chest-measurement']);
+		$('.snipcart-add-item').data('item-custom3-value',persistentQueryString['ccs-chest-measurement']);
+		
+		$('input#waist').val(persistentQueryString['ccs-waist-measurement']);
+		$('.snipcart-add-item').data('item-custom4-value',persistentQueryString['ccs-waist-measurement']);
+		
+		$('input#hips').val(persistentQueryString['ccs-hips-measurement']);
+		$('.snipcart-add-item').data('item-custom5-value',persistentQueryString['ccs-hips-measurement']);
+		
+		$('input#bicep').val(persistentQueryString['ccs-bicep-measurement']);
+		$('.snipcart-add-item').data('item-custom6-value',persistentQueryString['ccs-bicep-measurement']);
+		
+		
+		
+		$('#snipcart').data('cart-custom2-value',persistentQueryString['utm-campaign']);
+		$('#snipcart').data('cart-custom3-value',persistentQueryString['utm-source']);
+		$('#snipcart').data('cart-custom4-value',persistentQueryString['utm-medium']);
+		$('#snipcart').data('cart-custom5-value',persistentQueryString['utm-content']);
+		$('#snipcart').data('cart-custom6-value',persistentQueryString['utm-term']);
+	});
+	
+
+
+
+
+
+
+	// Sleeves
+	$( ".sleeve-size").click(function() {
+		var sleeve = $(this).data('size');
+		$('.snipcart-add-item').data('item-custom1-value',sleeve);
+		$('.sleeve-size.selected').removeClass('selected');
+		$(this).addClass('selected');
+	});
+	
+	
+	// Collar
+	$( ".collar-size").click(function() {
+		var collar = $(this).data('size');
+		$('.snipcart-add-item').data('item-custom2-value',collar);
+		$('.collar-size.selected').removeClass('selected');
+		$(this).addClass('selected');
+	});
+	
+	
+	
+	// chest
+	$( "input#chest").change(function() {
+	  var chest = $('input#chest').val();
+	  $('.snipcart-add-item').data('item-custom3-value',chest);
+	  localStorage["ccs-chest-measurement"] = jQuery("input#chest").val();
+	});
+	
+	$( "input#chest" ).focus(function() {
+		$('.illustration > div > .visible').removeClass('visible');
+		$('#chest-size').addClass('visible');
+	});
+	
+	
+	// waist
+	$( "input#waist").change(function() {
+	  var waist = $('input#waist').val();
+	  $('.snipcart-add-item').data('item-custom4-value',waist);
+	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
+	});
+	
+	$( "input#waist" ).focus(function() {
+		$('.illustration > div > .visible').removeClass('visible');
+		$('#waist-size').addClass('visible');
+	});
+	
+	
+	// hips
+	$( "input#hips").change(function() {
+	  var hips = $('input#hips').val();
+	  $('.snipcart-add-item').data('item-custom5-value',hips);
+	  localStorage["ccs-hips-measurement"] = jQuery("input#hips").val();
+	});
+	
+	$( "input#hips" ).focus(function() {
+		$('.illustration > div > .visible').removeClass('visible');
+		$('#hips-size').addClass('visible');
+	});
+	
+	
+	// bicep
+	$( "input#bicep").change(function() {
+	  var bicep = $('input#bicep').val();
+	  $('.snipcart-add-item').data('item-custom6-value',bicep);
+	  localStorage["ccs-bicep-measurement"] = jQuery("input#bicep").val();
+	});
+	
+	$( "input#bicep" ).focus(function() {
+		$('.illustration > div > .visible').removeClass('visible');
+		$('#bicep-size').addClass('visible');
+	});
+	
+	
+	
+	
+	
+	// Snipcart Custom Thank You Page
+	Snipcart.execute('bind', 'order.completed', function (order) {
+		var url = '/thankyou?order=' + order.token + '&orderid=' + order.invoiceNumber;
+		window.location.href = url;
+	});
+
+	
+</script>
+
