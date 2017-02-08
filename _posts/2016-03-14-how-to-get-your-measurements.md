@@ -1,4 +1,4 @@
----- 
+---
 layout: video-article
 meta_title:
 meta_description:
@@ -11,4 +11,4 @@ permalink: blog/how-to-measure-your-self
 bannerimage: /images/banners/measure.jpg
 authorimage: kevin.jpg
 videolink: 1QlkMzSouHM
-----
+---
