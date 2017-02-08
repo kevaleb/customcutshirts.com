@@ -1,6 +1,8 @@
 --- 
 layout: video-article
 title: How To Take Your Own Measurements
+description:
+keywords:
 subtitle: 
 category: How It Works
 author: Kevin LeBaron

@@ -1,6 +1,8 @@
 --- 
 layout: article
 title: How To Look Great With Minimal Effort
+description:
+keywords:
 subtitle: For regular guys who care about looking good
 category: Marketing
 author: Kevin LeBaron

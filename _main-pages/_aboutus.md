@@ -2,6 +2,7 @@
 layout: article
 title: About Us
 description: We like shirts that fit
+keywords:
 navtitle: about
 navorder: 4
 navclass: /about-us/

@@ -1,6 +1,8 @@
 --- 
 layout: article
 title: How To Make a Baggy Shirt Fit Perfectly
+description:
+keywords:
 category: Marketing
 author: Kevin LeBaron
 permalink: blog/how-to-make-baggy-shirts-fit-perfectly

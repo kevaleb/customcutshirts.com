@@ -1,6 +1,8 @@
 --- 
 layout: article
 title: Why You Can Trust Our Fit
+description:
+keywords:
 subtitle: 
 category: How It Works
 author: Kevin LeBaron

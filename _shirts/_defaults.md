@@ -2,6 +2,7 @@
 layout: product
 title: 
 description:
+keywords:
 permalink: 
 name:
 brand:
