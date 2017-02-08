@@ -1,8 +1,8 @@
 ---
 layout: product
-title: 
-description:
-keywords:
+meta_title: 
+meta_description:
+meta_keywords:
 permalink: 
 name:
 brand:

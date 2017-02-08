@@ -1,8 +1,9 @@
 --- 
 layout: article
-title: How To Look Great With Minimal Effort
-description:
-keywords:
+meta_title: 
+meta_description:
+meta_keywords:
+headline: How To Look Great With Minimal Effort
 subtitle: For regular guys who care about looking good
 category: Marketing
 author: Kevin LeBaron
