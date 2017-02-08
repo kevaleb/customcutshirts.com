@@ -1,8 +1,9 @@
 ---
 layout: article
-title: About Us
-description: We like shirts that fit
-keywords:
+meta_title: About Us
+meta_description: We like shirts that fit
+meta_keywords:
+headline:
 navtitle: about
 navorder: 4
 navclass: /about-us/
