@@ -12,5 +12,3 @@ bannerimage: /images/banners/measure.jpg
 authorimage: kevin.jpg
 videolink: 1QlkMzSouHM
 ---
-
-
