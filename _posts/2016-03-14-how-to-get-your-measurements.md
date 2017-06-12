@@ -1,10 +1,10 @@
---- 
+---
 layout: video-article
 meta_title:
 meta_description:
 meta_keywords:
 headline: How To Take Your Own Measurements
-subtitle: 
+subtitle:
 category: How It Works
 author: Kevin LeBaron
 permalink: blog/how-to-measure-your-self
