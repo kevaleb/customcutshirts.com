@@ -38,3 +38,11 @@ permalink: /starter-shirt/
 		{% endfor %}
 	</ul>
 </div>
+
+
+<script type="text/javascript">
+	Snipcart.execute('bind', 'order.completed', function (order) {
+		var url = '/thank-you/?order=' + order.token + '&orderid=' + order.invoiceNumber;
+		window.location.href = url;
+	});
+</script>
