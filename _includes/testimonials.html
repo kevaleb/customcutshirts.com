@@ -1,0 +1,13 @@
+<div class="testimonials">
+	<!--<h3>What are our customers saying?</h3>-->
+	<ul>
+		{% for item in site.testimonials %}
+		<li>
+			<div class="photo" style="background-image: url('{{ item.photo_path }}');"></div>
+			<br />
+			<img src="/images/icons/quote.svg" alt="" />
+			<p>{{ item.testimonial }}<br /><strong>- {{ item.title }}</strong></p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

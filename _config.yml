@@ -1,6 +1,9 @@
 name: Custom Cut Shirts
-collections:
-  - reports
+
+version: 3.4.3
+permalink: pretty
+excerpt_separator: <!--more-->
+
 collections:
   shirts:
     output: true
@@ -8,3 +11,23 @@ collections:
     output: true
   main-pages:
     output: true
+  testimonials:
+    output: false
+        
+defaults:
+  -
+    scope:
+      path: ""
+      type: "testimonials"
+    values:
+      _hide_content: true   
+  -
+    scope:
+      path: ""
+      type: "shirts"
+    values:
+      _hide_content: false
+      navtitle: Shop
+      navclass: /shop/
+      layout: shirt
+      permalink: /shop/:title/

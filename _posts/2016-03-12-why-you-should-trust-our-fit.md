@@ -16,6 +16,8 @@ First, when we receive a shirt, our tailors analyze them individually, consideri
 
 Once they have assessed the shirt, they inverse it, lay it out, and mark the shirt using a 3D printed template which takes your measurements and adds the correct % of wiggle room across the chest, waist, hips, and biceps.
 
+<!--more-->
+
 This is where our tailors make accommodations for irregularities such as a thinner fabric, specific seams, or joints.
 
 After making the shirt, the same tailor will pick the seams, disconnect the cuff, and cut the shirt to size, insuring that both sides mirror each other(a common problem with off the rack clothing).

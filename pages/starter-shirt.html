@@ -1,0 +1,40 @@
+---
+layout: default
+permalink: /starter-shirt/
+---
+
+<div class="products starter-shirt">
+	<!--<img src="/images/logos/logo.svg" alt="" style="display: inline-block; width: 120px; margin: 0 auto;"/>-->
+	<h2>Step 1 of 3</h2>
+	<h1 style="text-align: center;">Choose Starter Shirt</h1>
+	<br /><br />
+	<ul>
+		{% for product in site.shirts %}
+			{% for item in product.gallery %}
+				{% capture imagecount %}{{ forloop.length }}{% endcapture %}
+				{% if forloop.last %}
+					{% capture primaryimage %}{{ item.image_path }}{% endcapture %}
+				{% endif %}
+			{% endfor %}
+			<li>
+				<a href="#"
+				    class="snipcart-add-item"
+				    data-item-id="{{ product.sku }}"
+				    data-item-name="{{ product.brand }} {{ product.color }} {{ product.collar }} dress shirt"
+				    data-item-price="19"
+				    data-item-weight="1"
+				    data-item-url="http://0.0.0.0:4000/starter-shirt"
+				    data-item-description="Hand tailored in the U.S.A"
+				    data-item-image="{{ primaryimage }}"
+				>
+					<img src="{{ primaryimage }}" alt="Hand Tailored Dress Shirt" />
+					<hgroup>
+						<h1>{{ product.brand }} {{ product.color }} {{ product.collar }}</h1>
+						<h2>19</h2>
+						<span class="button">Add To Cart</span>
+					</hgroup>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

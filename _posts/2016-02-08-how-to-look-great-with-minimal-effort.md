@@ -15,6 +15,8 @@ We believe in the 80/20 rule… 80% of your results come from 20% of your effort
 
 Which is why we've decided to embark on a quest to hunt down and document the things that help regular guys (like you and I) look great with as little effort as humanly possible. 
 
+<!--more-->
+
 >“We’re NOT lazy… We're busy and you are too, so we’ll to keep things short, simple & to the point.”
 
 If you care about the way you look but have more important things to do than primping, shopping and/or watching fashion shows… Welcome brother! You’ve come to the right place.

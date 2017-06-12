@@ -9,10 +9,11 @@ navorder: 3
 navclass: /blog/
 permalink: /blog/
 ---
-<div class="banner half blog-post" style="background-image: url(/images/banners/blog-banner.jpg);">
+<div class="banner dark" style="background-image: url('/images/banners/blog-banner.jpg');">
 	<hgroup class="">
 		<h1>The Custom Cut Blog</h1>
 	</hgroup>
+	<img src="/images/other/banner-bottom.svg" alt="" class="banner-bottom"/>
 </div>
 
 <ul class="blogposts">
@@ -22,7 +23,7 @@ permalink: /blog/
 				<div class="postbanner" style="background-image: url({{ post.bannerimage }});"></div>
 				<!--<h3>{{ post.category }}</h3>-->
 				<h2>{{ post.title }}</h2>
-				{{ post.excerpt }}
+				{{ post.excerpt | lstrip }}
 			</a>
 		</li>
 	{% endfor %}

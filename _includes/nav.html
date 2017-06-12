@@ -2,8 +2,9 @@
 	<!--<a href="/" {% if page.navlcass == home %}class="selected"{% endif %}>Shop</a>-->
 	
 	{% assign navitems = site.main-pages | sort: 'navorder'  %}
+	<a href="/" {% if page.url == '/' %}class="selected"{% endif %}>HOME</a>
 	{% for item in navitems %}
-	<a href="{{ item.url }}" {% if page.url == item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
+	<a href="{{ item.url }}" {% if page.url contains item.navclass %}class="selected"{% endif %} {% if item.hide_from_nav == true %}style="display: none;"{% endif %}>{{ item.navtitle }}</a>
 	{% endfor %}
 	
 	<a href="#" class="snipcart-checkout">

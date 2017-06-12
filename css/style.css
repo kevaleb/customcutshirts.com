@@ -3,8 +3,9 @@
 
 
 /* @group General */
+
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
@@ -13,44 +14,68 @@ html {
 }
 body {
 	height: 100%;
-	padding: 0;
+	padding: 0 0 0 0px;
 	margin: 0;
 	background: #fff;
 }
 
+
+
 h1 {
-	font: 900 36px/48px Georgia, "Times New Roman", Times, serif;
-	color: #d64336;
+	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	color: #111;
 }
 h2 {
-	font:900  30px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
-	left: 1px;
+	font: 500 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+	color: #555;
+	word-spacing: 0;
+	letter-spacing: 0px;
 }
 h3 {
-	font: 500 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
-	letter-spacing: 1px;
+	font: 500 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
 }
 h4 {
-	font: 500 18px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
-	letter-spacing: 1px;
+	font: 500 15px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
 }
-p {
-	font: 200 18px/1.9em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
+h5 {
+	font: 400 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
 }
-ul {
-	font: 200 18px/1.9em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
+h6 {
+	font: 300 13px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
 }
-a {
-	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
+
+p,
+ul,
+ol,
+a,
+blockquote {
+	font: 300 17px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #555;
 }
-a:hover {
-	color: #b23636;
+p > em {
+	font-weight: 500;
+}
+
+ul,ol {
+	padding: 0 0 0 24px;
+}
+ul > li,ol > li {
+	text-align: left;
+}
+ul > li:last-of-type,
+ol > li:last-of-type {
+	margin: 0;
+}
+
+blockquote > p:before,
+blockquote > p:after {
+	content: '"';
 }
 
 /* @end */
@@ -141,6 +166,14 @@ header {
 
 
 
+
+header > .logo2 {
+	display: inline-block;
+	height: 96px;
+}
+header > .logo2 > img {
+	height: 100%;
+}
 
 
 header > .logo {
@@ -235,11 +268,11 @@ header > nav {
 }
 header > nav > a {
 	position: relative;
-	margin: 0 18px 0 0;
-	font: 200 16px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0 12px 0 0;
+	font: 400 14px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	color: rgba(255,255,255,.75);
 }
 header > nav > a:hover {
@@ -252,9 +285,9 @@ header > nav > a.selected:after  {
 	content: '\00a0';
 	position: absolute;
 	left: 0;
-	top: 20px;
+	top: -22px;
 	width: 100%;
-	height: 3px;
+	height: 4px;
 	background: #d64336;
 }
 
@@ -282,6 +315,7 @@ header > nav > a.snipcart-checkout > .snipcart-summary.snipcart-summary-empty {
 @media all and (max-width: 960px) {
 header {
 	left: 0;
+	top: 0px;
 	margin: 0;
 }
 header > .logo {
@@ -340,6 +374,18 @@ header > .logo > a > h1 {
 header > .logo > a > h1 > span {
 	font-size: 24px;
 	line-height: 36px;
+}
+
+header > .logo2 {
+	position: absolute;
+	height: auto;
+	width: 48%;
+	left: 26%;
+	top: 0;
+}
+header > .logo2 > img {
+	height: auto;
+	width: 100%;
 }
 
 
@@ -469,14 +515,7 @@ header.open > .menu-button > span.three {
 	height: 100%;
 	/*overflow: scroll;*/
 }
-.content > div {
-	/*height: 100%;*/
-	min-height: 100%;
-	/*max-width: 720px;*/
-	margin: 0 auto;
-	padding: 0 0 96px 0;
-	overflow: hidden;
-}
+
 .content section {
 	max-width: 720px;
 	margin: 0 auto;	
@@ -485,83 +524,187 @@ header.open > .menu-button > span.three {
 
 
 /* @end */
+/* @group ALTERNATING */
+.alternating {
+	padding: 0;
+	background: #f2f2f2;
+}
+.alternating > div {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 150px 0;
+}
+.alternating > div:first-of-type {
+	
+}
+.alternating > div:nth-of-type(even) {
+	background: linear-gradient(to right, #f2f2f2 0%, #e5e5e5 50%, #f2f2f2 100%) #f2f2f2;
+	
+}
+
+
+.alternating > div > img {
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	height: 80%;
+	margin: 0 0 0 48px;
+}
+
+.alternating > div > hgroup {
+	padding: 0 50% 0 0;
+}
+.alternating > div > hgroup > h2 {
+	margin: 0 0 24px;
+	
+	text-transform: uppercase;
+}
+.alternating > div > hgroup > p {
+	margin: 0 0 36px 0;
+	clear: left;
+}
+.alternating > div > hgroup > ul {
+	list-style: none;
+	margin: 0;
+	padding: 24px 0 0 0;
+}
+.alternating > div > hgroup > ul > li {
+	margin: 0 0 12px;
+}
+.alternating > div > hgroup > ul > li:before {
+	content: '\00a0';
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: -3px 6px 0 0;
+	background-image: url('/images/icons/check.png');
+	background-size: cover;
+	vertical-align: middle;
+}
+
+
+
+
+.alternating > div:nth-of-type(even) > hgroup {
+	padding: 0 0 0 50%;
+}
+.alternating > div:nth-of-type(even) > img  {
+	left: auto;
+	right: 50%;
+	margin: 0px 48px 0 0;
+}
+.alternating > div:nth-of-type(even) > h2 {
+	float: right;
+}
+.alternating > div:nth-of-type(even) > p {
+	float: right;
+	clear: right;
+}
+
+
+
+
+.alternating > section {
+	position: relative;
+	max-width: none;
+	text-align: center;
+	padding: 100px 96px;
+	background-color: #fff!important;
+	background-attachment: fixed!important;
+	background-size: cover!important;
+}
+.alternating > section > h4 {
+	position: relative;
+	z-index: 1000000;
+	max-width: 720px;
+	margin: 0 auto;
+	font: 100 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #333;
+	letter-spacing: 2px;
+}
+
+
+
+
+
+@media all and (max-width: 720px) {
+
+	.alternating {
+		
+	}
+	.alternating > div {
+		padding: 0 0 96px 0;
+		text-align: center;
+	}
+	.alternating > div:first-of-type {
+		margin-top: 0;
+	}
+	.alternating > div > hgroup {
+		position: relative;
+		margin: -96px 0 0 0;
+		padding: 24px!important;
+		text-align: left;
+	}
+	.alternating > div > hgroup:before {
+		content: '\00a0';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0px;
+		width: 100%;
+		height: 96px;
+		background: linear-gradient(to bottom, rgba(38,40,40,0) 0%, rgba(38,40,40,100) 100%);
+	}
+	.alternating > div > hgroup > h2 {
+		margin: 0 0 12px 0;
+	}
+	.alternating > div > hgroup > p {
+		margin: 0;
+	}
+	.alternating > div:first-of-type {
+		
+	}
+	
+	.alternating > div > img  {
+		position: relative;
+		left: auto;
+		top: ;
+		margin: 0!important;
+		height: auto;
+		width: 100%;
+	}
+	.alternating > div:nth-of-type(even) > img {
+		right: auto;
+		height: auto;
+	}
+	.alternating > div > hgroup {
+		margin: 0;
+	}
+
+}
+/* @end */
+
+
+
+
 
 
 /* @group BANNER */
 .banner {
 	position: relative;
-	height: 100%;
-	/*max-height: 720px;*/
+	height: 72%;
+	/*max-height: 600px;*/
 	min-height: 320px;
 	padding: 72px 0;
-	background: radial-gradient(ellipse farthest-corner, #333 12%, black 100%) #000;
+	background-color: #000;
+	/*background: radial-gradient(ellipse farthest-corner, #333 12%, black 100%) #000;*/
 	background-size: cover;
-	background-attachment: fixed;
 	background-position: center;
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
 }
-.banner:before {
-	content: '\00a0';
-	position: absolute;
-	z-index: 1000;
-	left: 0;
-	top: 100%;
-	margin: -50px 0 0 -50%;
-	width: 200%;
-	height: 200px;
-	background: #fff;
-	transform: rotate(-2deg);
-}
-
-.content .banner.half {
-	height: 72%;
-	background-color: #000;
-	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
-	background-attachment:scroll;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	box-shadow: 0 75px 75px rgba(0,0,0,.75) inset;
-}
-.content .banner.half > hgroup > h1 {
-	display: inline-block;
-	background: #000;
-	/*float: left;*/
-	padding: 12px 24px;
-}
-.content .banner.half.shop > hgroup > h1 {
-	padding: auto;
-}
-
-
-
-
-
-
-.banner > img {
-	position: absolute;
-	height: 100%;
-}
-.banner > img.left {
-	left: 0;
-	top: 0;
-}
-.banner > img.right {
-	top: 0;
-	right: 0;
-}
-/*.banner:before {
-	display: none;
-	content: '\00a0';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-image: radial-gradient(circle, rgba(0, 0, 0, .5) 0%, rgba(0,0,0,.75) 100%);	
-}*/
 .banner:after {
 	content: '\00a0';
 	display: inline-block;
@@ -570,7 +713,53 @@ header.open > .menu-button > span.three {
 	vertical-align: middle;
 }
 
+.banner > img {
+	position: absolute;
+	height: 100%;
+	left: 50%;
+}
+.banner > img.left {
+	left: 0;
+	top: 0;
+}
+.banner > img.right {
+	top: 0;
+	right: 0%!important;
+	left: auto;
+}
 
+.banner > img.bg-img {
+	position: absolute;
+	top: 0;
+	right: 50%;
+	height: 100%;
+	margin: 0 0 0 -25%;
+}
+.banner > img.banner-bottom,
+.banner.productbanner > img.banner-bottom {
+	position: absolute;
+	z-index: 100;
+	
+	left: 0!important;
+	right: 0!important;
+	top: auto!important;
+	bottom: -1px;
+	height: auto;
+	width: 100%;
+}
+
+
+
+.banner.dark:before {
+	content: '\00a0';
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
 
 
 /* @group HGROUP */
@@ -591,7 +780,7 @@ header.open > .menu-button > span.three {
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
-	font:400 36px/48px Georgia, "Times New Roman", Times, serif;
+	font:900 36px/48px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 1px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
 	text-transform: uppercase;
@@ -716,12 +905,36 @@ hgroup.video {
 @media all and (max-width: 540px) {
 .banner {
 	height: auto;
+	min-height: none!;
+	max-height: none;
 }
 .banner::after {
-	/*display: none;*/
+	display: none;
 }
+.banner > img {
+	height: auto;
+	max-width: 50%;
+	max-height: 100%;
+}
+.banner > img.bg-img {
+	height: 100%;
+	width: auto;
+	max-width: none;
+	left: 50%;
+	margin: 0 0 0 -25%;
+}
+.banner > img.banner-bottom {
+	width: 110%;
+	left: -5%;
+	bottom: -2px;
+	max-width: none;
+}
+
+
+
+
 .banner > hgroup {
-	padding: 96px 24px;
+	padding: 48px 12px;
 	text-shadow: 0 1px 5px rgba(0,0,0,.5);
 }
 .banner > hgroup > img {
@@ -770,19 +983,6 @@ hgroup.video {
 
 /* @group Banner Home */
 
-/*.home > .main-header {
-	position: absolute;
-	bottom: 0px;
-}
-.home > .main-header > div > a {
-	display: none;
-}
-.home > .main-header > div > nav {
-	width: 100%;
-	text-align: center;
-}*/
-
-
 .banner.home {
 	padding-top: 0;
 }
@@ -810,50 +1010,35 @@ hgroup.video {
 
 
 @media all and (max-width: 720px) {
-.banner.home {
-	height: 72%;
-	min-height: none;
+	.banner.home {
+		/*height: 72%;
+		min-height: none;*/
+	}
 }
-}
-
-
-
-
-
 
 
 @media all and (max-width: 540px) {
-.banner.home {
-	height: 60%;
-	min-height: none;
-}
-
-.banner.home > hgroup > h1 {
-	margin: 0 0 24px 0;
-	font:100 20px/30px Georgia, "Times New Roman", Times, serif;
-	text-shadow: 0 1px 2px rgba(0,0,0,.5);
-	text-transform: capitalize;
-}
-.banner.home > hgroup > h1 > strong {
-	display: block;
-	text-transform: uppercase;
-	font-size: 30px;
-	line-height: 36px;
-	font-weight: 900;
-	letter-spacing: 1px;
-}
-
-.banner.home > hgroup > .button {
-	display: inline-block;
-	margin: ;
-}
-
-.banner > img {
-	height: auto;
-	max-width: 50%;
-	max-height: 100%;
-	/*opacity: .5;*/
-}
+	.banner.home {
+		
+	}
+	.banner.home > hgroup > h1 {
+		margin: 0 0 24px 0;
+		font:100 20px/30px Georgia, "Times New Roman", Times, serif;
+		text-shadow: 0 1px 2px rgba(0,0,0,.5);
+		text-transform: capitalize;
+	}
+	.banner.home > hgroup > h1 > strong {
+		display: block;
+		text-transform: uppercase;
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 900;
+		letter-spacing: 1px;
+	}
+	.banner.home > hgroup > .button {
+		display: inline-block;
+		margin: ;
+	}
 }
 
 /* @end */
@@ -861,105 +1046,320 @@ hgroup.video {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @group Testimials */
-.testimonials {
-	bottom: 0;
-	width: 100%;
-	background: #e5e5e5;
-	text-align: center;
+/* @group Product Banner */
+.productbanner{
+	
 }
-/*.testimonials > div {
-	width: 100%;
+.productbanner > img {
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 50%;
+	height: 100%;
 }
-.testimonials > div > div {
+.productbanner > hgroup {	
 	width: 100%;
-}*/
-.testimonials > div > div > div {
-	width: 100%;
+	max-width: none;
+	padding: 0 0 0 50%;
+	text-align: left;
 }
-.testimonials .flickity-viewport {
-	overflow: visible;
+.productbanner > hgroup > h1 {
+	max-width: 360px;
+	margin: 0;
+	font: 22px/36px Georgia, "Times New Roman", Times, serif;
+	text-align: left;
 }
-.testimonials button {
+.productbanner > hgroup > h2 {
+	margin: 0px 0 24px 0;
+	font: 100 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+}
+.productbanner > hgroup > h2:before {
+	content: '$';
+}
+.productbanner > hgroup > h3 {
+	margin: 0 0 24px 0;
+	font: 200 16px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: rgba(255,255,255,.75);
+	text-transform: uppercase;
+}
+.productbanner > hgroup > .button {
+	border-radius: 0;
+}
+
+
+
+@media all and (max-width: 720px) {
+.productbanner {
+	height: auto!important;
+	padding: 0;
+}
+.productbanner:before,
+.productbanner:after {
 	display: none;
 }
-.testimonials .gallery-cell {
-	/*display: inline-block;*/
-	/*width: 30%;*/
-	width: 100%;
-	margin: -96px 0 0 0;
-	padding: 24px 24px 96px 24px;
-	/*text-align: center!important;*/
-	/*white-space: nowrap;*/
-	/*background: #fff;*/
-}
-.testimonials .gallery-cell > img {
-	/*display: none;*/
-	width: 150px;
-	/*margin: 0 0 36px 0;*/
-	border: 10px solid #e5e5e5;
-	border-radius: 100px;
-	vertical-align: middle;
-}
-.testimonials .gallery-cell > h4 {
-	margin: 0 0 24px 0;
-	font-size: 16px;
-	color: #d64336;
-}
-.testimonials .gallery-cell > h4:before {
-	/*content: '-- ';*/
-}
-.testimonials .gallery-cell > p {
+.productbanner > img {
 	position: relative;
-	/*max-width: 480px;*/
-	display: inline-block;
-	padding: 0  24px;
-	/*border-left: 3px solid #fff;*/
-	/*text-align: left;*/
-	vertical-align: middle;
-	white-space: normal;
-	font: 200 20px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 1px;
-	color: #333;
-}
-.testimonials .gallery-cell > p > i {
-	position: absolute;
-	top: 9px;
+	display: block;
+	width: 100%;
+	max-width: none!important;
+	height: auto;
 	left: 0;
-	font-size: 16px;
+	top: 0;
+	opacity: 1!important;
 }
-.testimonials .gallery-cell > p > i~i {
-	left: auto;
-	right: 0;
+.productbanner > hgroup {
+	padding: 24px!important;
+	background: #fff;
+	text-align: center;
 }
-/*.testimonials .gallery-cell > p:before,
-.testimonials .gallery-cell > p:after {
-	content: '"';
-	font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}*/
+.productbanner > hgroup:before {
+	content: '\00a0';
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	top: 0%;
+	margin: -25px 0 0 -50%;
+	width: 200%;
+	height: 50px;
+	background: #fff;
+	transform: rotate(-2deg);
+}
+.productbanner > hgroup > h1 {
+	position: relative;
+	max-width: none;
+	z-index: 100000;
+	color: #000;
+	text-shadow: none;
+	text-align: inherit;
+}
+.productbanner > hgroup > h2 {
+	display: block;
+	position: relative;
+	z-index: 100000;
+	margin: 0 0 48px 0;
+	color: #000!important;
+	text-shadow: none;
+	font: 100 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif!important;
+}
+.productbanner > hgroup > h3 {
+	display: block;
+	position: relative;
+	z-index: 100000;
+	margin: 0 0 24px 0;
+	color: #666!important;
+	text-shadow: none;
+}
+.productbanner > hgroup > .button {
+	display: none;
+}
+}
+/* @end */
+
+
+
+
+/* @group In Banner - Opt In */
+
+.opt-in {
+	position: relative;
+}
+.opt-in > hgroup {
+	
+}
+.opt-in > hgroup > h2 {
+	line-height: 24px;
+}
+.opt-in > hgroup > ul {
+position: relative;
+	display: inline-block;
+	list-style: none;
+	margin: 24px 0 0 0;
+	padding: 24px;
+	border: 2px solid #fff;
+}
+.opt-in > hgroup > ul:before {
+	position: absolute;
+	left: 50%;
+	top: -12px;
+	width: 24px;
+	height: 24px;
+	margin: 0 0 0 -9px;
+	content: '+';
+	color: #000;
+	background: #fff;
+	border-radius: 96px;
+	font: 900 18px/21px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.opt-in > hgroup > ul > h2 {
+display: none;
+	color: #fff;
+	font: 700 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	vertical-align: middle;
+}
+.opt-in > hgroup > ul > h2:before,
+.opt-in > hgroup > ul > h2:after {
+	content: '';
+	display: inline-block;
+	width: 36px;
+	height: 2px;
+	margin: -3px 6px 0 6px;
+	background: #fff;
+	vertical-align: middle;
+	border-radius: 6px;
+}
+.opt-in > hgroup > ul > li {
+	font: 200 15px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+}
 
 /* @end */
+
+/* @group Startet Kit */
+
+.starter-kit {
+	padding: 48px 24px;
+	/*border-bottom: 1px solid #ccc;*/
+}
+.starter-kit > hgroup {
+	max-width: 480px;
+	margin:  0 auto;
+	text-align: center;
+}
+.starter-kit > hgroup > h1 {
+	
+}
+.starter-kit > hgroup > p {
+	
+}
+
+/* @end */
+
+/* @group Single Field Form */
+
+.single-field-form {
+	display: inline-block;
+	margin: 30px 0 0 0;
+	background: #fff;
+	border-radius: 3px 4px 4px 3px;
+	white-space: nowrap;
+	border: 1px solid #ccc;
+}
+.single-field-form > label {
+	
+}
+.single-field-form > label > span {
+	font:400 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	text-shadow: none;
+	padding: 12px;
+	color: #000;
+	letter-spacing: 1px;
+}
+.single-field-form > label > input {
+	outline: none;
+	border: none;
+	font: 600 14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	line-height: 42px;
+	vertical-align: middle;
+}
+.single-field-form > button {
+	padding: 12px;
+	border-radius: 0 3px 3px 0;
+	font: 700 10px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.single-field-form > button:after {
+	content: ' The Club';
+}
+
+
+
+
+@media all and (max-width: 320px) {
+	.single-field-form > button:after {
+		display: none;
+	}
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+/* @group Testimonials */
+
+.testimonials {
+	text-align: center;
+}
+.testimonials > ul {
+	padding: 48px 0;
+}
+.testimonials > ul > li {
+	display: inline-block;
+	max-width: 250px;
+	text-align: center;
+	margin: 0 0 24px 0;
+	padding: 0 12px;
+	vertical-align: top;
+}
+.testimonials > ul > li > .photo {
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	
+	border: 1px solid #ccc;
+	border-radius: 96px;
+	box-shadow:  0 0 0 2px #fff inset;
+	background-size: contain;
+}
+.testimonials > ul > li > img {
+	width: 24px;
+	margin: 12px 0 6px 0;
+	opacity: .72;
+}
+.testimonials > ul > li > p {
+	max-width: 200px;
+	margin: 0 auto;
+	font: 200 14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+}
+.testimonials > ul > li > p > strong {
+	display: block;
+	font-size: 12px;
+	margin: 12px 0 0 0;
+}
+.testimonials > ul > li > p
+@media all and (max-width: 480px) {
+	.testimonials > ul > li {
+		width: 100%;
+		max-width: none;
+		padding: 24px;
+	}
+	.testimonials > ul > li > img {
+		/*margin: 12px 0 3px 0;*/
+	}
+}
+
+/* @end */
+
+
 
 /* @group Process */
 .process {
 	position: relative;
 	z-index: 100000;
 	margin: 0 auto;
-	padding: 0px 0 96px 0;
+	padding: 48px 0;
 	text-align: center;
 	background: #d64336;
 	/*white-space: nowrap;*/
@@ -1028,29 +1428,6 @@ hgroup.video {
 	letter-spacing: 1px;
 	/*text-align: left;*/
 }
-/*.process > div > p:before {
-	content: counter(my-badass-counter);
-	counter-increment: my-badass-counter;
-	
-	position: absolute;
-	top: 6px;
-	left: 0px;
-	display: inline-block;
-	width: 36px;
-	height: 36px;
-	/*margin: -12px 12px 0 0;*!/
-	/*border-radius: 24px;*!/
-	background: #fff;
-	font: 500 14px/36px Georgia, "Times New Roman", Times, serif;
-	color: #d64336;
-	text-align: center;
-	vertical-align: text-bottom;
-}*/
-
-
-
-
-
 
 @media all and (max-width: 720px) {
 .process > div {
@@ -1060,7 +1437,7 @@ hgroup.video {
 	max-width: 320px;
 }
 .process > div+div {
-	margin: 48px auto 0 auto;
+	margin: 72px auto 0 auto;
 }
 }
 
@@ -1073,7 +1450,7 @@ hgroup.video {
 	margin: 0 0 48px 0;
 }
 .process > div+div{
-	margin-top: 150px;
+	
 }
 .process > div > img {
 	margin: 0;
@@ -1782,8 +2159,8 @@ section.measure {
 .products {
 	position: relative;
 	z-index: 100000;
-	padding: 0px 0;
-	background: #0;
+	padding: 48px 24px;
+	background: #f2f2f2;
 }
 .products > h2{
 	margin: 48px 0 0 0;
@@ -1796,23 +2173,20 @@ section.measure {
 .products > ul {
 	max-width: 960px;
 	margin: 0 auto;
+	padding: 0;
 	list-style: none;
 	text-align: center;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .products > ul > li {
-	float: left;
-	width: 49%;
-	margin: 0 0 2% 0;
+	display: inline-block;
+	width: 28%;
+	margin: 2%;
 	color: #fff;
 	background: #000;
-	
-	background: #000;
-	border: 1px solid #000;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.15);
 }
-.products > ul > li:nth-last-of-type(odd) {
-	margin-left: 2%;
-}
+
 .products > ul > li > a {
 	display: block;
 	overflow: hidden;
@@ -1822,7 +2196,7 @@ section.measure {
 .products > ul > li > a > img {
 	float: none;
 	display: inline-block;
-	width: 50%;
+	width: 100%;
 	vertical-align: middle;
 	margin: 0 -.25em 0 0!important;
 }
@@ -1839,7 +2213,7 @@ section.measure {
 	padding: 24px;
 }
 .products > ul > li > a > hgroup > h1 {
-	font: 900 18px/24px Georgia, "Times New Roman", Times, serif;
+	font: 900 14px/24px Georgia, "Times New Roman", Times, serif;
 	color: #fff;
 	text-transform: uppercase;
 	white-space: nowrap;
@@ -1848,13 +2222,10 @@ section.measure {
 	color: #000;
 }
 .products > ul > li > a > hgroup > h2 {
-	font: 200 16px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: rgba(255,255,255,.5);
-	
 	color: rgba(0,0,0,0.75);
-	font: 200 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 300 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	
 	
 	
@@ -1863,35 +2234,52 @@ section.measure {
 	content: "$";
 }
 
-
-
-@media all and (max-width: 1080px) {
-	.products {
-		padding: 2%;
-	}
-}
-
 @media all and (max-width: 720px) {
 	.products {
-	padding: 24px;
+		padding: 48px 24px;
 	}
-	.products > ul > li:nth-last-of-type(odd) {
-		margin-left: 0;
+	.products > ul > li {
+		width: 46%;
+		margin: 1%;
+	}
+}
+@media all and (max-width: 480px) {
+	.products {
+		padding: 48px;
 	}
 	.products > ul > li {
 		width: 100%;
 		margin: 0 0 24px;
 	}
-	.products > ul > li:last-of-type {
-		margin: 0;
-	}
 }
+
 /* @end */
 
+/* @group Products - Starter Shirt */
 
+.products.starter-shirt {
+	
+}
+.products.starter-shirt > ul {
+	
+}
+.products.starter-shirt > ul > li {
+	
+}
+.products.starter-shirt > ul > li > a {
+	
+}
+.products.starter-shirt > ul > li > a > hgroup {
+	text-align: center;
+}
+.products.starter-shirt > ul > li > a > hgroup > .button {
+	padding: 3px 6px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
 
-
-
+/* @end */
 
 /* @group Products - Basic */
 
@@ -1961,136 +2349,8 @@ section.measure {
 
 
 
-/* @group Product Banner */
-.productbanner{
-	padding: 0;
-	background-size: contain;
-	background-position: left bottom;
-	background-repeat: no-repeat;
-	background: #000;
-}
-.productbanner:before {
-	content: '\00a0';
-	position: absolute;
-	z-index: 1000;
-	left: 0;
-	top: 100%;
-	margin: -50px 0 0 -50%;
-	width: 200%;
-	height: 200px;
-	background: #fff;
-	transform: rotate(-2deg);
-}
-.productbanner > img {
-	position: absolute;
-	top: 0;
-	right: 50%;
-	height: 100%;
-}
-.productbanner > hgroup {	
-	width: 100%;
-	max-width: none;
-	padding: 0 0 0 50%;
-	text-align: left;
-}
-.productbanner > hgroup > h1 {
-	max-width: 360px;
-	margin: 0;
-	font: 22px/36px Georgia, "Times New Roman", Times, serif;
-	text-align: left;
-}
-.productbanner > hgroup > h2 {
-	margin: 0px 0 24px 0;
-	font: 100 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #fff;
-}
-.productbanner > hgroup > h2:before {
-	content: '$';
-}
-.productbanner > hgroup > h3 {
-	margin: 0 0 24px 0;
-	font: 200 16px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: rgba(255,255,255,.75);
-	text-transform: uppercase;
-}
-.productbanner > hgroup > .button {
-	border-radius: 0;
-}
 
 
-
-@media all and (max-width: 720px) {
-.productbanner {
-	height: auto!important;
-	padding: 0;
-}
-.productbanner:before,
-.productbanner:after {
-	display: none;
-}
-.productbanner > img {
-	position: relative;
-	display: block;
-	width: 100%;
-	max-width: none!important;
-	height: auto;
-	left: 0;
-	top: 0;
-	opacity: 1!important;
-}
-.productbanner > hgroup {
-	padding: 24px!important;
-	background: #fff;
-	text-align: center;
-}
-.productbanner > hgroup:before {
-	content: '\00a0';
-	position: absolute;
-	z-index: 1000;
-	left: 0;
-	top: 0%;
-	margin: -25px 0 0 -50%;
-	width: 200%;
-	height: 50px;
-	background: #fff;
-	transform: rotate(-2deg);
-}
-.productbanner > hgroup > h1 {
-	position: relative;
-	max-width: none;
-	z-index: 100000;
-	color: #000;
-	text-shadow: none;
-	text-align: inherit;
-}
-.productbanner > hgroup > h2 {
-	display: block;
-	position: relative;
-	z-index: 100000;
-	margin: 0 0 48px 0;
-	color: #000!important;
-	text-shadow: none;
-	font: 100 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif!important;
-}
-.productbanner > hgroup > h3 {
-	display: block;
-	position: relative;
-	z-index: 100000;
-	margin: 0 0 24px 0;
-	color: #666!important;
-	text-shadow: none;
-}
-.productbanner > hgroup > .button {
-	display: none;
-}
-}
-/* @end */
-
-/* @group Shop Banner */
-
-
-
-/* @end */
 
 /* @group Hand Tailored */
 .banner h1.hand-tailored {
@@ -2660,6 +2920,7 @@ section.measure {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	border-bottom: 3px solid #d64336;
 }
 .blogposts > li > a > h2 {
 	margin: 0 0 12px;
@@ -3056,27 +3317,19 @@ footer > div > nav > a.snipcart-checkout > .snipcart-summary {
 
 
 /* @group Snip Cart */
-.snipcart-checkout-container {
+.snipcart-checkout-container,
+div.snip-layout {
 
-	z-index: 10000000000000000000!important;
+	z-index: 1000000000000000000000000000000000!important;
 }
 
+[id*=”_utm”] {
+	display: none;
+}
+[class*=”snipcart-customfield”] {
+	display: none;
+}
 
-/* Order Info */
-#snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textarea span {
-	display: block;
-}
-#snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textarea textarea {
-	display: block;
-	width: 100%;
-	min-height: 150px;
-	padding: 12px;
-	font: 400 15px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #666;
-}
-#snipcart-orderinfos-form .snipcart-customfield.snipcart-customfield-textbox {
-	display: none!important;
-}
 
 /* @end */
 

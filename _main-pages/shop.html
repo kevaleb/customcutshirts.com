@@ -4,22 +4,20 @@ meta_title: Hand Tailored Dress Shirts
 meta_description:
 meta_keywords:
 headine:
-navtitle: shop
-navclass: /
-permalink: /
+navtitle: Shop
+navclass: /shop/
+permalink: /shop/
+navorder: 2
 ---
-<div class="banner half shop" style="background-image: url('/images/banners/sew.jpg');">
+<div class="banner dark" style="background-image: url('/images/banners/sew.jpg');">
 	<hgroup>
-		<h1 class="hand-tailored">
-			<span class="one">Hand Tailored</span>
-			<span class="two">In The</span>
-			<span class="three">United States <span>of</span> America</span>
-		</h1>
+		<h1>Hand Tailored Dress Shirts</h1>
 	</hgroup>
+	<img src="/images/other/banner-bottom-grey.svg" alt="" class="banner-bottom"/>
 </div>
 
 <div class="products">
-	<h2>Shirts</h2>
+	<!--<h2>Shirts</h2>-->
 	<ul>
 		{% for product in site.shirts %}
 			{% for item in product.gallery %}

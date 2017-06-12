@@ -14,3 +14,5 @@ videolink: 1QlkMzSouHM
 ---
 
 To watch the video click the title above (Sorry, I'm just to lazy to have written the instructions yet.)
+
+<!--more-->
