@@ -705,6 +705,9 @@ header.open > .menu-button > span.three {
 	text-align: center;
 	white-space: nowrap;
 }
+.banner.small {
+	height: 48%;
+}
 .banner:after {
 	content: '\00a0';
 	display: inline-block;
@@ -753,7 +756,7 @@ header.open > .menu-button > span.three {
 .banner.dark:before {
 	content: '\00a0';
 	position: absolute;
-	z-index: 1000;
+	z-index: 100;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -903,7 +906,8 @@ hgroup.video {
 
 
 @media all and (max-width: 540px) {
-.banner {
+.banner,
+.banner.small {
 	height: auto;
 	min-height: none!;
 	max-height: none;
@@ -1681,7 +1685,7 @@ section.measure {
 	white-space: nowrap;
 }
 .shirt-options > hgroup {
-	padding: 0 0 18px 0;
+	padding: 0 0 24px 0;
 	white-space: normal;
 }
 .shirt-options > hgroup > h2 {
@@ -1706,6 +1710,25 @@ section.measure {
 .shirt-options > .button {
 	display: block;
 	margin: 24px auto 0 auto;
+}
+
+.shirt-options > .buttons {
+	max-width: 320px;
+	margin: 24px auto 0 auto;
+}
+.shirt-options > .buttons > .button {
+	display: block;
+	width: 100%;
+}
+.shirt-options > .buttons > .button.black {
+	margin: 12px 0 0 0;
+	padding: 12px 0;
+	border: 2px solid #333;
+	background: none;
+	color: #333;
+	font: 400 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+	
 }
 
 /* @end */

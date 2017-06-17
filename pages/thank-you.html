@@ -1,0 +1,80 @@
+---
+layout: default
+title: Thank You
+description: Your about to get more compliments than you can handle
+navtitle: thanks
+permalink: /thank-you/
+---
+<div class="banner small">
+	<hgroup class="">
+		<h2>AWESOME!</h2>
+		<h1>We got your order</h1>
+	</hgroup>
+	<img src="/images/other/banner-bottom.svg" alt="" class="banner-bottom"/>
+</div>
+
+<div class="shirt-options" id="shirt-options">
+	<hgroup>
+		<h2>Now Lets Get Your Measurements</h2>
+		<h3>We'll keep them on file for the next time you order</h3>
+	</hgroup>
+	
+	<form class="six-point" id="six_point" method="get" action="/all-done/">
+		<label>
+			<span>Collar</span>
+			<select>
+				{% for item in site.data.collar %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Sleeves</span>
+			<select>
+				{% for item in site.data.sleeves %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Bicep</span>
+			<select name="bicep" id="bicep" value="">
+				{% for item in site.data.bicep %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Chest</span>
+			<select name="chest" id="chest" value="">
+				{% for item in site.data.chest %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Waist</span>
+			<select name="waist" id="waist" value="">
+				{% for item in site.data.waist %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Hips</span>
+			<select name="hips" id="hips" value="">
+				{% for item in site.data.hips %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+	</form>
+	
+	<img src="/images/illustrations/bodymeasurements.png" alt="" />
+	
+	<div class="buttons">
+		<button class="button" type="submit" form="six_point" value="Submit">Save My Measurements</button>
+		<a href="/how-to-measure/" class="button black" target="_blank">I Don't Know My Measurements</a>
+		<a href="/all-done/" class="button black">Use What You Have On File</a>
+	</div>
+</div>
