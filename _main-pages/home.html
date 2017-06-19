@@ -27,10 +27,10 @@ navorder: 1
 		<h1>Try Our Starter Kit For $19</h1>
 		<p>You get one hand tailored dress shirt, a measuring tape and a high five (if we ever meet in person).</p>
 		<br />
-		<form action="https://lebaron.createsend.com/t/t/s/qdigy/" method="post" id="subForm" class="single-field-form">
+		<form action="/starter-shirt/" method="get" id="" class="single-field-form">
 	        <label for="fieldEmail">
 	        	<span>Email: </span>
-	        	<input id="fieldEmail" name="cm-qdigy-qdigy" type="email" required />
+	        	<input id="ccs_email" name="ccs_email" type="email" required />
 	        </label>
 	        <button type="submit" class="button">Join</button>
 		</form>
@@ -72,3 +72,10 @@ navorder: 1
 		</hgroup>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		$('input#ccs_email').val(persistentQueryString['ccs_email']);
+	});
+</script>

@@ -41,8 +41,14 @@ permalink: /starter-shirt/
 
 
 <script type="text/javascript">
+	jQuery(document).ready(function() {
+		heap.identify(persistentQueryString['ccs_email']);
+		
+		heap.addUserProperties({email: persistentQueryString['ccs_email']});
+	});
+	
 	Snipcart.execute('bind', 'order.completed', function (order) {
-		var url = '/thank-you/?order=' + order.token + '&orderid=' + order.invoiceNumber;
+		var url = '/starter-kit-thank-you/?ccs_order_token='  + order.token + '&ccs_invoice_number=' + order.invoiceNumber + '&ccs_order_email=' + order.email ;
 		window.location.href = url;
 	});
 </script>

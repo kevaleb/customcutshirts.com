@@ -3,7 +3,7 @@ layout: default
 title: Thank You
 description: Your about to get more compliments than you can handle
 navtitle: thanks
-permalink: /thank-you/
+permalink: /starter-kit-thank-you/
 ---
 <div class="banner small">
 	<hgroup class="">
@@ -21,32 +21,8 @@ permalink: /thank-you/
 	
 	<form class="six-point" id="six_point" method="get" action="/all-done/">
 		<label>
-			<span>Collar</span>
-			<select>
-				{% for item in site.data.collar %}
-				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
-				{% endfor %}
-			</select>
-		</label>
-		<label>
-			<span>Sleeves</span>
-			<select>
-				{% for item in site.data.sleeves %}
-				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
-				{% endfor %}
-			</select>
-		</label>
-		<label>
-			<span>Bicep</span>
-			<select name="bicep" id="bicep" value="">
-				{% for item in site.data.bicep %}
-				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
-				{% endfor %}
-			</select>
-		</label>
-		<label>
 			<span>Chest</span>
-			<select name="chest" id="chest" value="">
+			<select name="ccs_chest" id="chest" value="">
 				{% for item in site.data.chest %}
 				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
 				{% endfor %}
@@ -54,7 +30,7 @@ permalink: /thank-you/
 		</label>
 		<label>
 			<span>Waist</span>
-			<select name="waist" id="waist" value="">
+			<select name="ccs_waist" id="waist" value="">
 				{% for item in site.data.waist %}
 				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
 				{% endfor %}
@@ -62,8 +38,33 @@ permalink: /thank-you/
 		</label>
 		<label>
 			<span>Hips</span>
-			<select name="hips" id="hips" value="">
+			<select name="ccs_hips" id="hips" value="">
 				{% for item in site.data.hips %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		
+		<label>
+			<span>Collar</span>
+			<select name="ccs_collar" id="collar" value="">
+				{% for item in site.data.collar %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Sleeves</span>
+			<select  name="ccs_sleeves" id="sleeves" value="">
+				{% for item in site.data.sleeves %}
+				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			<span>Bicep</span>
+			<select name="ccs_bicep" id="bicep" value="">
+				{% for item in site.data.bicep %}
 				<option value="{{ item.measurement }}">{{ item.measurement }}</option>
 				{% endfor %}
 			</select>
@@ -78,3 +79,15 @@ permalink: /thank-you/
 		<a href="/all-done/" class="button black">Use What You Have On File</a>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		var ccs_order_token = persistentQueryString['ccs_order_token'];
+		var	ccs_invoice_number = persistentQueryString['ccs_invoice_number'];
+		var	ccs_order_email = persistentQueryString['ccs_order_email'];
+		heap.track('Purchase', {OrderToken: ccs_order_token , InvoiceNumber: ccs_invoice_number , OrderEmail: ccs_order_email});
+	});
+</script>
+
+

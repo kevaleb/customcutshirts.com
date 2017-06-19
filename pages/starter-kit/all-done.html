@@ -1,0 +1,49 @@
+---
+layout: default
+permalink: /all-done/
+---
+<div class="banner small">
+	<hgroup class="">
+		<h2>Perfect!</h2>
+		<h1>We Have Your Measurements</h1>
+	</hgroup>
+	<img src="/images/other/banner-bottom.svg" alt="" class="banner-bottom"/>
+</div>
+
+<div class="all-done">
+	<h2>Can't wait to try your new shirt?</h2>
+	<h3>Pass the time by telling Your friends about us</h3>
+	
+	<div
+	  id="refcandy-lollipop"
+	  data-id="s56qpfmgbqygfqqcjzlanquor"
+	  data-fname="John"
+	  data-lname="Smith"
+	  data-email="kevin@customcutshirts.com"
+	></div>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.defer=true;js.src="//portal.referralcandy.com/assets/widgets/refcandy-lollipop.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","refcandy-lollipop-js");</script>
+</div>
+
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		var ccs_chest_measurements = persistentQueryString['ccs_chest'];
+		var ccs_waist_measurements = persistentQueryString['ccs_waist'];
+		var ccs_hips_measurements = persistentQueryString['ccs_hips'];
+		var ccs_collar_measurements = persistentQueryString['ccs_collar'];
+		var ccs_sleeve_measurements = persistentQueryString['ccs_sleeves'];
+		var ccs_bicep_measurements = persistentQueryString['ccs_bicep'];
+		
+		heap.addUserProperties({Chest: ccs_chest_measurements , Waist: ccs_waist_measurements , Hips: ccs_hips_measurements , Collar: ccs_collar_measurements , Sleeves: ccs_sleeve_measurements , Biceps: ccs_bicep_measurements});
+		heap.track('Measurements', {Chest: ccs_chest_measurements , Waist: ccs_waist_measurements , Hips: ccs_hips_measurements , Collar: ccs_collar_measurements , Sleeves: ccs_sleeve_measurements , Biceps: ccs_bicep_measurements});
+	});
+	
+	!function(d,s) {
+	  var rc = "//go.referralcandy.com/purchase/t54gfxtyquz75ucu2a65xt1hu.js";
+	  var js = d.createElement(s);
+	  js.src = rc;
+	  var fjs = d.getElementsByTagName(s)[0];
+	  fjs.parentNode.insertBefore(js,fjs);
+	}(document,"script");
+</script>
