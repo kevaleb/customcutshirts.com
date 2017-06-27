@@ -3408,6 +3408,27 @@ footer > div > nav > a.snipcart-checkout > .snipcart-summary {
 
 
 
+/* @group All Done */
+
+.all-done {
+	padding: 96px 0;
+	text-align: center;
+}
+.all-done > h2 {
+	font: 700 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+.all-done > h3 {
+	margin: 0 0 24px 0;
+	font: 300 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* @end */
+
+
+
+
+
 
 /* @group Snip Cart */
 .snipcart-checkout-container,

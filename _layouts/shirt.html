@@ -32,16 +32,16 @@ navtitle: Shop
 {% include testimonials.html %}
 
 <script type="text/javascript">
-	jQuery(document).ready(function() {		
-		$('#snipcart').data('cart-custom2-value',persistentQueryString['utm-campaign']);
-		$('#snipcart').data('cart-custom3-value',persistentQueryString['utm-source']);
-		$('#snipcart').data('cart-custom4-value',persistentQueryString['utm-medium']);
-		$('#snipcart').data('cart-custom5-value',persistentQueryString['utm-content']);
-		$('#snipcart').data('cart-custom6-value',persistentQueryString['utm-term']);
-	});
+//	jQuery(document).ready(function() {		
+//		$('#snipcart').data('cart-custom2-value',persistentQueryString['utm-campaign']);
+//		$('#snipcart').data('cart-custom3-value',persistentQueryString['utm-source']);
+//		$('#snipcart').data('cart-custom4-value',persistentQueryString['utm-medium']);
+//		$('#snipcart').data('cart-custom5-value',persistentQueryString['utm-content']);
+//		$('#snipcart').data('cart-custom6-value',persistentQueryString['utm-term']);
+//	});
 	
 	Snipcart.execute('bind', 'order.completed', function (order) {
-		var url = '/thankyou?order=' + order.token + '&orderid=' + order.invoiceNumber;
+		var url = '/thank-you/?ccs_order_token='  + order.token + '&ccs_invoice_number=' + order.invoiceNumber + '&ccs_order_email=' + order.email ;
 		window.location.href = url;
 	});
 </script>

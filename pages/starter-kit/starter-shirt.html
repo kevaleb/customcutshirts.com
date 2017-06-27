@@ -48,7 +48,7 @@ permalink: /starter-shirt/
 	});
 	
 	Snipcart.execute('bind', 'order.completed', function (order) {
-		var url = '/starter-kit-thank-you/?ccs_order_token='  + order.token + '&ccs_invoice_number=' + order.invoiceNumber + '&ccs_order_email=' + order.email ;
+		var url = '/thank-you/?ccs_order_token='  + order.token + '&ccs_invoice_number=' + order.invoiceNumber + '&ccs_order_email=' + order.email ;
 		window.location.href = url;
 	});
 </script>
