@@ -2,14 +2,25 @@
 layout: default
 permalink: /starter-shirt/
 ---
-
+<div class="progress-banner">
+	<hgroup>
+		<h2>Step 1</h2>
+		<h1> Choose Your First Shirt</h1>
+	</hgroup>
+	<div class="progress">
+		<span class="selected"><img src="/images/icons/shirt.svg" alt="" /></span>
+		<span><img src="/images/icons/measure.svg" alt="" /></span>
+		<span><img src="/images/icons/star.svg" alt="" /></span>
+	</div>
+</div>
 <div class="products starter-shirt">
 	<!--<img src="/images/logos/logo.svg" alt="" style="display: inline-block; width: 120px; margin: 0 auto;"/>-->
-	<h2>Step 1 of 3</h2>
+	<!--<h2>Step 1 of 3</h2>
 	<h1 style="text-align: center;">Choose Starter Shirt</h1>
-	<br /><br />
+	<br /><br />-->
 	<ul>
-		{% for product in site.shirts %}
+		{% assign shirts = site.shirts | sort:'sort_number' %}
+		{% for product in shirts %}
 			{% for item in product.gallery %}
 				{% capture imagecount %}{{ forloop.length }}{% endcapture %}
 				{% if forloop.last %}
@@ -21,7 +32,7 @@ permalink: /starter-shirt/
 				    class="snipcart-add-item"
 				    data-item-id="{{ product.sku }}"
 				    data-item-name="{{ product.brand }} {{ product.color }} {{ product.collar }} dress shirt"
-				    data-item-price="19.00"
+				    data-item-price="18.75"
 				    data-item-weight="1"
 				    data-item-url="http://www.customcutshirts.com/starter-shirt/"
 				    data-item-description="Hand tailored in the U.S.A"
@@ -30,8 +41,9 @@ permalink: /starter-shirt/
 					<img src="{{ primaryimage }}" alt="Hand Tailored Dress Shirt" />
 					<hgroup>
 						<h1>{{ product.brand }} {{ product.color }} {{ product.collar }}</h1>
-						<h2>19</h2>
-						<span class="button">Add To Cart</span>
+						<h2>18.75</h2>
+						<h3>75.00</h3>
+						<span class="button">Start With This Shirt</span>
 					</hgroup>
 				</a>
 			</li>
